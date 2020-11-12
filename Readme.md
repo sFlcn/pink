@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел](https://up.htmlacademy.ru/adaptive/21/user/997009).
-* Наставник: [Игорь Бабушкин].
+* Наставник: [Игорь Бабушкин](https://htmlacademy.ru/profile/id185816).
 
 ---
 

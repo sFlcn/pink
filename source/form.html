@@ -33,7 +33,63 @@
     </header>
 
     <main class="page-main">
+      <section class="headline">
+        <h1 class="headline__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </section>
 
+      <section class="contest">
+        <div class="contest__wrapper">
+          <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__title-addition" hidden>Пожалуйста, заполните форму ниже:</span></h2>
+          <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form__fieldset form__fieldset--name">
+              <legend class="form__legend form__legend--name">Как вас зовут?</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--name" for="form__surname">Фамилия:</label>
+                  <input class="form__text-input" id="form__surname" type="text" name="form__surname" placeholder="Укажите фамилию *">
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--name" for="form__first-name">Имя:</label>
+                  <input class="form__text-input" id="form__first-name" type="text" name="form__first-name" placeholder="Введите ваше имя *">
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--name" for="form__patronymic">Отчество:</label>
+                  <input class="form__text-input" id="form__patronymic" type="text" name="form__patronymic" placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__fieldset form__fieldset--achievements">
+              <legend class="form__legend form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <input class="form__check-input" id="form__check--shark-selfie" type="checkbox" name="form__check--shark-selfie" checked>
+                  <label for="form__check--shark-selfie">Сделал селфи с акулой</label>
+                </li>
+                <li class="form__input">
+                  <input class="form__check-input" id="form__check--burn" type="checkbox" name="form__check--burn" checked>
+                  <label for="form__check--burn">Обгорел на пляже</label>
+                </li>
+                <li class="form__input">
+                  <input class="form__check-input" id="form__check--norris" type="checkbox" name="form__check--norris">
+                  <label for="form__check--norris">Видел Чака Норриса</label>
+                </li>
+                <li class="form__input">
+                  <input class="form__check-input" id="form__check--souvenirs" type="checkbox" name="form__check--souvenirs">
+                  <label for="form__check--souvenirs">Накупил сувениров</label>
+                </li>
+                <li class="form__input">
+                  <input class="form__check-input" id="form__check--tower" type="checkbox" name="form__check--tower" checked>
+                  <label for="form__check--tower">Удержал башню</label>
+                </li>
+                <li class="form__input">
+                  <input class="form__check-input" id="form__check--trashed-hotel" type="checkbox" name="form__check--trashed-hotel">
+                  <label for="form__check--trashed-hotel">Разгромил отель</label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">

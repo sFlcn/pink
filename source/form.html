@@ -40,22 +40,28 @@
       <section class="contest">
         <div class="contest__wrapper">
           <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__title-addition" hidden>Пожалуйста, заполните форму ниже:</span></h2>
-          <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
             <fieldset class="form__fieldset form__fieldset--name">
               <legend class="form__legend form__legend--name">Как вас зовут?</legend>
               <ul class="form__inputs">
                 <li class="form__input">
-                  <label class="form__label form__label--name" for="form__surname">Фамилия:</label>
-                  <input class="form__text-input" id="form__surname" type="text" name="form__surname" placeholder="Укажите фамилию *" required>
+                  <label class="form__label form__label--name">
+                    Фамилия:
+                    <input class="form__text-input" type="text" name="form__surname" placeholder="Укажите фамилию *" required>
+                  </label>
                 </li>
                 <li class="form__input">
-                  <label class="form__label form__label--name" for="form__first-name">Имя:</label>
-                  <input class="form__text-input" id="form__first-name" type="text" name="form__first-name" placeholder="Введите ваше имя *" required>
+                  <label class="form__label form__label--name">
+                    Имя:
+                    <input class="form__text-input" type="text" name="form__first-name" placeholder="Введите ваше имя *" required>
+                  </label>
                 </li>
                 <li class="form__input">
-                  <label class="form__label form__label--name" for="form__patronymic">Отчество:</label>
-                  <input class="form__text-input" id="form__patronymic" type="text" name="form__patronymic" placeholder="Ну и отчество тоже">
+                  <label class="form__label form__label--name">
+                    Отчество:
+                    <input class="form__text-input" type="text" name="form__patronymic" placeholder="Ну и отчество тоже">
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -64,28 +70,40 @@
               <legend class="form__legend form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
               <ul class="form__inputs">
                 <li class="form__input">
-                  <input class="form__check-input" id="form__check--shark-selfie" type="checkbox" name="form__check--shark-selfie" checked>
-                  <label class="form__label form__label--achievements" for="form__check--shark-selfie">Сделал селфи с акулой</label>
+                  <label class="form__label form__label--achievements">
+                    Сделал селфи с акулой
+                    <input class="form__check-input" type="checkbox" name="form__check--shark-selfie" checked>
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__check-input" id="form__check--burn" type="checkbox" name="form__check--burn" checked>
-                  <label class="form__label form__label--achievements" for="form__check--burn">Обгорел на пляже</label>
+                  <label class="form__label form__label--achievements">
+                    Обгорел на пляже
+                    <input class="form__check-input" type="checkbox" name="form__check--burn" checked>
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__check-input" id="form__check--norris" type="checkbox" name="form__check--norris">
-                  <label class="form__label form__label--achievements" for="form__check--norris">Видел Чака Норриса</label>
+                  <label class="form__label form__label--achievements">
+                    Видел Чака Норриса
+                    <input class="form__check-input" type="checkbox" name="form__check--norris">
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__check-input" id="form__check--souvenirs" type="checkbox" name="form__check--souvenirs">
-                  <label class="form__label form__label--achievements" for="form__check--souvenirs">Накупил сувениров</label>
+                  <label class="form__label form__label--achievements">
+                    Накупил сувениров
+                    <input class="form__check-input" type="checkbox" name="form__check--souvenirs">
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__check-input" id="form__check--tower" type="checkbox" name="form__check--tower" checked>
-                  <label class="form__label form__label--achievements" for="form__check--tower">Удержал башню</label>
+                  <label class="form__label form__label--achievements">
+                    Удержал башню
+                    <input class="form__check-input" type="checkbox" name="form__check--tower" checked>
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__check-input" id="form__check--trashed-hotel" type="checkbox" name="form__check--trashed-hotel">
-                  <label class="form__label form__label--achievements" for="form__check--trashed-hotel">Разгромил отель</label>
+                  <label class="form__label form__label--achievements">
+                    Разгромил отель
+                    <input class="form__check-input" type="checkbox" name="form__check--trashed-hotel">
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -94,12 +112,16 @@
               <legend class="form__legend form__legend--contacts">Контактная информация</legend>
               <ul class="form__inputs">
                 <li class="form__input">
-                  <label class="form__label form__label--contacts" for="form__phone">Номер телефона</label>
-                  <input class="form__text-input" id="form__phone" type="text" name="form__phone" placeholder="Номер, пожалуйста">
+                  <label class="form__label form__label--contacts">
+                    Номер телефона
+                    <input class="form__text-input" type="text" name="form__phone" placeholder="Номер, пожалуйста">
+                  </label>
                 </li>
                 <li class="form__input">
-                  <label class="form__label form__label--contacts" for="form__email">Адрес почты</label>
-                  <input class="form__text-input" id="form__email" type="text" name="form__email" placeholder="Введите почту *" required>
+                  <label class="form__label form__label--contacts">
+                    Адрес почты
+                    <input class="form__text-input" type="text" name="form__email" placeholder="Введите почту *" required>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -108,16 +130,22 @@
               <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
               <ul class="form__inputs">
                 <li class="form__input">
-                  <input class="form__radio-input" id="form__radio--ios" type="radio" name="form__radio--app" value="ios" checked>
-                  <label class="form__label form__label--app" for="form__radio--ios">Pink для iOS</label>
+                  <label class="form__label form__label--app">
+                    Pink для iOS
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="ios" checked>
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__radio-input" id="form__radio--android" type="radio" name="form__radio--app" value="android">
-                  <label class="form__label form__label--app" for="form__radio--android">Pink на Android</label>
+                  <label class="form__label form__label--app">
+                    Pink на Android
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="android">
+                  </label>
                 </li>
                 <li class="form__input">
-                  <input class="form__radio-input" id="form__radio--windows" type="radio" name="form__radio--app" value="windows">
-                  <label class="form__label form__label--app" for="form__radio--windows">Windows Phone</label>
+                  <label class="form__label form__label--app">
+                    Windows Phone
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="windows">
+                  </label>
                 </li>
               </ul>
             </fieldset>

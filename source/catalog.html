@@ -151,26 +151,43 @@
       <section class="photo-editor">
         <div class="photo-editor__wrapper">
           <form class="photo-editor__interface" action="https://echo.htmlacademy.ru" method="post">
-            <input class="photo-editor__button photo-editor__button--select button" type="file" required disabled hidden>
             <img class="photo-editor__image" src="https://via.placeholder.com/280x374" width="280" height="374" alt="ваш файл">
             <div class="photo-editor__controls">
               <p class="photo-editor__tools">
                 <button class="photo-editor__tool photo-editor__tool--crop" type="button"><span class="visuallyhidden">Кадрировать</span></button>
                 <button class="photo-editor__tool photo-editor__tool--fill" type="button"><span class="visuallyhidden">Раскрасить</span></button>
                 <button class="photo-editor__tool photo-editor__tool--contrast" type="button"><span class="visuallyhidden">Контраст</span></button>
+                <div class="photo-editor__range photo-editor__range--crop range-controls">
+                  <div class="range-controls__scale"></div>
+                  <div class="range-controls__pin"></div>
+                  <label class="range-controls__value">
+                    <span class="visuallyhidden">Уровень кадрирования</span>
+                    <input class="visuallyhidden" type="number" name="photo-editor__crop-value" min="0" max="100" value="80" step="5">
+                  </label>
+                </div>
+                <div class="photo-editor__range photo-editor__range--fill range-controls">
+                  <div class="range-controls__scale"></div>
+                  <div class="range-controls__pin"></div>
+                  <label class="range-controls__value">
+                    <span class="visuallyhidden">Уровень раскрашивания</span>
+                    <input class="visuallyhidden" type="number" name="photo-editor__fill-value" min="0" max="100" value="15" step="5">
+                  </label>
+                </div>
+                <div class="photo-editor__range photo-editor__range--contrast range-controls">
+                  <div class="range-controls__scale"></div>
+                  <div class="range-controls__pin"></div>
+                  <label class="range-controls__value">
+                    <span class="visuallyhidden">Уровень контраста</span>
+                    <input class="visuallyhidden" type="number" name="photo-editor__contrast-value" min="0" max="100" value="50" step="5">
+                  </label>
+                </div>
               </p>
             </div>
-            <div class="photo-editor__tool-range range-controls">
-              <div class="range-controls__scale">
-                <div class="range-controls__bar"></div>
-              </div>
-              <div class="range-controls__pin"></div>
-              <label class="range-controls__value">
-                <input type="number" name="photo-editor__range-value" min="0" max="100" value="80" step="5">
-              </label>
-            </div>
-            <input class="photo-editor__button photo-editor__button--upload button" type="submit">
-            <input class="photo-editor__button photo-editor__button--reset button" type="reset">
+            <input class="photo-editor__button photo-editor__button--upload button" type="submit" value="Запостить">
+            <input class="photo-editor__button photo-editor__button--reset button" type="reset" value="Отмена">
+            <label class="photo-editor__button photo-editor__button--select button" tabindex="0" hidden>Выберите файл:
+              <input class="visuallyhidden" type="file" required disabled>
+            </label>
           </form>
         </div>
       </section>

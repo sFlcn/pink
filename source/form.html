@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="page" lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img src="https://via.placeholder.com/74x23" width="74" height="23" alt="логотип PINK.">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visuallyhidden">Меню</span>
+          </button>
+          <ul class="main-nav__list pages-list">
+            <li class="pages-list__page">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="pages-list__page">
+              <a href="catalog.html">Фотографии</a>
+            </li>
+            <li class="pages-list__page pages-list__page--current">
+              <a>Конкурс</a>
+            </li>
+            <li class="pages-list__page">
+              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="headline">
+        <h1 class="headline__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </section>
+
+      <section class="contest">
+        <div class="contest__wrapper">
+          <div class="contest__intro intro">
+            <h2 class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__title-addition" hidden>Пожалуйста, заполните форму ниже:</span></h2>
+          </div>
+          <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+
+            <fieldset class="form__fieldset form__fieldset--name">
+              <legend class="form__legend form__legend--name">Как вас зовут?</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--name">
+                    Фамилия:
+                    <input class="form__text-input" type="text" name="form__surname" placeholder="Укажите фамилию *" required>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--name">
+                    Имя:
+                    <input class="form__text-input" type="text" name="form__first-name" placeholder="Введите ваше имя *" required>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--name">
+                    Отчество:
+                    <input class="form__text-input" type="text" name="form__patronymic" placeholder="Ну и отчество тоже">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--achievements">
+              <legend class="form__legend form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--achievements">
+                    Сделал селфи с акулой
+                    <input class="form__check-input" type="checkbox" name="form__check--shark-selfie" checked>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--achievements">
+                    Обгорел на пляже
+                    <input class="form__check-input" type="checkbox" name="form__check--burn" checked>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--achievements">
+                    Видел Чака Норриса
+                    <input class="form__check-input" type="checkbox" name="form__check--norris">
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--achievements">
+                    Накупил сувениров
+                    <input class="form__check-input" type="checkbox" name="form__check--souvenirs">
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--achievements">
+                    Удержал башню
+                    <input class="form__check-input" type="checkbox" name="form__check--tower" checked>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--achievements">
+                    Разгромил отель
+                    <input class="form__check-input" type="checkbox" name="form__check--trashed-hotel">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--contacts">
+              <legend class="form__legend form__legend--contacts">Контактная информация</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--contacts">
+                    Номер телефона
+                    <input class="form__text-input" type="text" name="form__phone" placeholder="Номер, пожалуйста">
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--contacts">
+                    Адрес почты
+                    <input class="form__text-input" type="text" name="form__email" placeholder="Введите почту *" required>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--app">
+              <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--app">
+                    Pink для iOS
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="ios" checked>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--app">
+                    Pink на Android
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="android">
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--app">
+                    Windows Phone
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="windows">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--message">
+              <legend class="form__legend form__legend--message">Опишите свои эмоции</legend>
+              <div class="form__input">
+                <textarea class="form__textarea-input" id="form__message" name="form__message" cols="24" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </div>
+            </fieldset>
+
+            <div class="form__buttons">
+              <input class="form__submit button" type="submit" value="Отправить форму">
+              <p class="form__requirements">* — обязательные поля</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img src="https://via.placeholder.com/145x40" width="145" height="40" alt="логотип PINK.">
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
+                <span class="visuallyhidden">Наш twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+                <span class="visuallyhidden">Наш facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+                <span class="visuallyhidden">Наш youtube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <span>Разработано</span>
+            <img src="./img/htmlacademy.svg" width="27" height="34" alt="логотип HTML academy.">
+            <span class="visuallyhidden">HTML Academy</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <section class="popup popup--succes">
+      <h2 class="popup__subject">Ваша заявка отправлена</h2>
+      <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <button class="popup__submit" type="button" name="popup__submit--succes">Закрыть окно</button>
+    </section>
+
+    <section class="popup popup--failure">
+      <h2 class="popup__subject">Что-то пошло не так!</h2>
+      <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="popup__submit" type="button" name="popup__submit--succes">ОК</button>
+    </section>
+  </body>
+</html>

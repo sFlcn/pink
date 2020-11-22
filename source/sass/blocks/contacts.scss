@@ -1,0 +1,16 @@
+.contacts {
+  padding: 50px 40px;
+  background-color: $palette-brightcontrast;
+}
+
+.contacts__title {
+  @include font-primary(24px, 120%, 300);
+}
+
+.contacts__caption {
+  @include font-titles(18px, 25px);
+}
+
+.contacts__link {
+  @include font-accent(24px, 33px, 300);
+}

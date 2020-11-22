@@ -1,0 +1,17 @@
+.features {
+  padding: 46px 20px 0 20px;
+  background-color: $palette-backs;
+}
+
+.features__intro {
+  @include font-primary(24px, 120%, 300);
+  background-color: $palette-brightcontrast;
+}
+
+.features__list {
+  @include list();
+}
+
+.features__subject {
+  @include font-titles;
+}

@@ -1,0 +1,12 @@
+.invitation__title {
+  @include font-titles(30px, 36px);
+}
+
+.invitation__text {
+  @include font-primary;
+}
+
+.invitation__link {
+  @include font-accent($line-height: 24px);
+  text-decoration: underline;
+}

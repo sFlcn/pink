@@ -3,6 +3,22 @@
 @import "global/mixins.scss";
 @import "global/global.scss";
 @import "global/fonts.scss";
+@import "global/button.scss";
 
 // Blocks
 @import "blocks/page.scss";
+// header
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/download.scss";
+// main
+@import "blocks/features.scss";
+@import "blocks/invitation.scss";
+@import "blocks/reviews.scss";
+@import "blocks/price.scss";
+@import "blocks/price-table.scss";
+@import "blocks/contacts.scss";
+// footer
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";

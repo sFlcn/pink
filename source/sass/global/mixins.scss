@@ -1,0 +1,26 @@
+@mixin font-menu($size: 18px, $line-height: 32px, $weight: 700, $color: $palette-brightcontrast) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-primary($size: 14px, $line-height: 24px, $weight: 400, $color: $palette-prime) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-titles($size: 18px, $line-height: 24px, $weight: 700, $color: $palette-darkcontrast) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}

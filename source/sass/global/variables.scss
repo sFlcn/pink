@@ -1,5 +1,17 @@
 // Colors
 
-$dblue: #283645;
-$ppink: #d22856;
-$grey: #f2f2f2;
+// color-binding
+$ebonyclay: #283645;
+$cerisered: #d22856;
+$junglegreen: #2aab6d;
+$mercury: #e5e5e5;
+$concrete: #f2f2f2;
+
+// layout variables
+$palette-prime: $ebonyclay;
+$palette-highlite: $cerisered;
+$palette-accent: $junglegreen;
+$palette-outlines: $mercury;
+$palette-backs: $concrete;
+$palette-darkcontrast: #000000;
+$palette-brightcontrast: #ffffff;

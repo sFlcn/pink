@@ -1,0 +1,31 @@
+.popup {
+  background-color: $palette-brightcontrast;
+}
+
+.popup__message-arrea {
+  padding: 20px 22px;
+}
+
+.popup__subject {
+  @include font-titles;
+}
+
+.popup__text {
+  @include font-primary;
+}
+
+.popup__buttons-arrea {
+  padding: 30px 22px;
+  background-color: $palette-backs;
+
+  .popup--succes & {
+    background-color: $palette-brightcontrast;
+  }
+}
+
+.popup__submit {
+  @include font-menu(18px, 30px);
+  padding: 23px;
+  text-align: center;
+  background-color: $palette-accent;
+}

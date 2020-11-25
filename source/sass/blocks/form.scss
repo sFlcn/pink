@@ -6,7 +6,47 @@
   @include font-accent(14px, 18px);
 }
 
+.form__fieldset {
+  padding: 42px 22px;
+  border: 0;
+  background-color: $palette-brightcontrast;
+
+  &:nth-child(even) {
+    background-color: $palette-backs;
+  }
+}
+
 .form__label--name,
 .form__label--contacts {
   @include font-accent(14px, 30px);
+}
+
+.form__inputs {
+  list-style: none;
+}
+
+.form__text-input,
+.form__textarea-input {
+  @include font-primary(18px, 30px, 700, $palette-prime);
+  padding: 20px 23px;
+  border: 2px solid $palette-outlines;
+
+  &::placeholder {
+    @include font-primary(18px, 30px, 400, $palette-prime);
+  }
+}
+
+.form__submit {
+  @include font-menu(18px, 30px);
+  padding: 23px;
+  text-align: center;
+  background-color: $palette-accent;
+}
+
+.form__requirements {
+  @include font-primary(14px, 30px);
+}
+
+.form__mark {
+  color: $palette-highlite;
 }

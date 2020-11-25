@@ -1,0 +1,42 @@
+@mixin font-menu($size: 18px, $line-height: 32px, $weight: bold, $color: $palette-brightcontrast) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-primary($size: 14px, $line-height: 24px, $weight: 400, $color: $palette-prime) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-accent($size: 14px, $line-height: 30px, $weight: 400, $color: $palette-highlite) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-titles($size: 18px, $line-height: 24px, $weight: bold, $color: $palette-darkcontrast) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin list() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

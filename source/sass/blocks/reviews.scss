@@ -1,0 +1,19 @@
+.reviews {
+  padding: 50px 20px;
+}
+
+.reviews__list {
+  @include list();
+}
+
+.reviews__author-name {
+  @include font-titles(18px, 30px);
+}
+
+.reviews__author-about {
+  @include font-primary(14px, 30px);
+}
+
+.reviews__text {
+  @include font-primary(14px, 30px);
+}

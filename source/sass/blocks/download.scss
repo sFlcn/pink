@@ -1,0 +1,48 @@
+.download {
+  padding: 20px 28px 20px 38px;
+  background-color: $mirage;
+}
+
+.download__link {
+  @include font-menu(18px, 18px, bold);
+  display: block;
+  width: 280px;
+  height: 55px;
+  box-sizing: border-box;
+  border: 3px solid $palette-brightcontrast;
+  border-radius: 39px;
+}
+
+.download__platforms {
+  @include list;
+}
+
+.download__alt-link {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+
+  &--appstore {
+    width: 47px;
+    height: 56px;
+    background-image: url("../img/logo--apple.svg");
+  }
+
+  &--googleplay {
+    width: 43px;
+    height: 47px;
+    background-image: url("../img/logo--android.svg");
+  }
+
+  &--microsoftstore {
+    width: 44px;
+    height: 41px;
+    background-image: url("../img/logo--microsoft.svg");
+  }
+}
+
+.download__description {
+  @include font-menu(14px, 24px, 300);
+}

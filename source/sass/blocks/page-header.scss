@@ -1,0 +1,15 @@
+.page-header {
+  background-image: url("../img/back--mobile.jpg");
+  background-color: $mirage;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header__title {
+  @include font-menu(24px, 33px, 300, $palette-brightcontrast);
+
+  &--main {
+    line-height: 120%;
+  }
+}

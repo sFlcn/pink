@@ -1,0 +1,30 @@
+.price-table {
+  @include font-primary(14px, 30px);
+  border-collapse: collapse;
+}
+
+.price-table__header-cell {
+  width: 276px;
+  padding-top: 19px;
+  background-color: $palette-prime;
+
+  &--empty {
+    background: none;
+  }
+}
+
+.price__caption {
+  @include font-menu(16px, 30px);
+  margin: 0;
+  padding: 0;
+}
+
+.price__sum {
+  @include font-menu(18px, 30px, 300);
+  margin: 0;
+  padding: 0;
+}
+
+.price-table__cell {
+  background-color: $palette-brightcontrast;
+}

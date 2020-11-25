@@ -3,40 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html">
-          <img src="https://via.placeholder.com/74x23" width="74" height="23" alt="логотип PINK.">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
+        <nav class="page-header__nav main-nav main-nav--open">
+          <a class="main-nav__logo" href="index.html"></a>
+          <button class="main-nav__menu-button main-nav__menu-button--open button" type="button">
             <span class="visually-hidden">Меню</span>
           </button>
-          <ul class="main-nav__list pages-list">
-            <li class="pages-list__page">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="pages-list__page">
+            <li class="main-nav__item">
               <a href="catalog.html">Фотографии</a>
             </li>
-            <li class="pages-list__page pages-list__page--current">
+            <li class="main-nav__item main-nav__item--current">
               <a>Конкурс</a>
             </li>
-            <li class="pages-list__page">
+            <li class="main-nav__item">
               <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
             </li>
           </ul>
         </nav>
+        <div class="page-header__headline">
+          <h1 class="page-header__title page-header__title--main">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </div>
       </div>
     </header>
 
     <main class="page-main">
-      <section class="headline">
-        <h1 class="headline__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      </section>
-
       <section class="contest">
         <div class="contest__wrapper">
           <div class="contest__intro intro">
@@ -45,7 +43,7 @@
           <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
             <fieldset class="form__fieldset form__fieldset--name">
-              <legend class="form__legend form__legend--name">Как вас зовут?</legend>
+              <legend class="visually-hidden">Как вас зовут?</legend>
               <ul class="form__inputs">
                 <li class="form__input">
                   <label class="form__label form__label--name">
@@ -111,7 +109,7 @@
             </fieldset>
 
             <fieldset class="form__fieldset form__fieldset--contacts">
-              <legend class="form__legend form__legend--contacts">Контактная информация</legend>
+              <legend class="visually-hidden">Контактная информация</legend>
               <ul class="form__inputs">
                 <li class="form__input">
                   <label class="form__label form__label--contacts">

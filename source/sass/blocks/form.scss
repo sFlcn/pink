@@ -16,13 +16,20 @@
   }
 }
 
-.form__label--name,
-.form__label--contacts {
-  @include font-accent(14px, 30px);
+.form__label {
+  @include font-primary(18px, 30px);
+
+  &--name {
+    @include font-accent(14px, 30px);
+  }
+
+  &--contacts {
+    @include font-accent(14px, 30px);
+  }
 }
 
 .form__inputs {
-  list-style: none;
+  @include list;
 }
 
 .form__text-input,

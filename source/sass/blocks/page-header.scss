@@ -8,6 +8,7 @@
 
 .page-header__title {
   @include font-menu(24px, 33px, 300, $palette-brightcontrast);
+  padding: 25px 20px;
 
   &--main {
     line-height: 120%;

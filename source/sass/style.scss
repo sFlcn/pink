@@ -4,7 +4,6 @@
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/button.scss";
-
 // Blocks
 @import "blocks/page.scss";
 // header
@@ -18,7 +17,12 @@
 @import "blocks/price.scss";
 @import "blocks/price-table.scss";
 @import "blocks/contacts.scss";
+@import "blocks/contest.scss";
+@import "blocks/intro.scss";
+@import "blocks/form.scss";
 // footer
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+//popup
+@import "blocks/popup.scss";

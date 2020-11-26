@@ -1,0 +1,7 @@
+.intro {
+  background-color: $palette-brightcontrast;
+}
+
+.intro__text {
+  @include font-primary(14px, 30px);
+}

@@ -16,7 +16,7 @@
   color: $color;
 }
 
-@mixin font-accent($size: 14px, $line-height: 30px, $weight: 400, $color: $palette-highlite) {
+@mixin font-accent($size: 14px, $line-height: 30px, $weight: 400, $color: $palette-accent) {
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: $size;

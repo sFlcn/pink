@@ -16,13 +16,20 @@
   }
 }
 
-.form__label--name,
-.form__label--contacts {
-  @include font-accent(14px, 30px);
+.form__label {
+  @include font-primary(18px, 30px);
+
+  &--name {
+    @include font-accent(14px, 30px);
+  }
+
+  &--contacts {
+    @include font-accent(14px, 30px);
+  }
 }
 
 .form__inputs {
-  list-style: none;
+  @include list;
 }
 
 .form__text-input,
@@ -40,7 +47,7 @@
   @include font-menu(18px, 30px);
   padding: 23px;
   text-align: center;
-  background-color: $palette-accent;
+  background-color: $palette-highlite;
 }
 
 .form__requirements {
@@ -48,5 +55,5 @@
 }
 
 .form__mark {
-  color: $palette-highlite;
+  color: $palette-accent;
 }

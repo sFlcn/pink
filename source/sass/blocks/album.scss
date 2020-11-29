@@ -1,0 +1,29 @@
+.album {
+  background-color: $palette-brightcontrast;
+}
+
+.album__list {
+  @include list;
+}
+
+.album__description {
+  padding: 0;
+  margin: 0;
+}
+
+.album__caption {
+  background-color: $palette-backs;
+  padding: 25px 10px 25px 17px;
+}
+
+.album__author {
+  @include font-primary(14px, 24px, bold);
+}
+
+.album__time {
+  @include font-primary(12px, 24px, 300);
+}
+
+.album__comment {
+  @include font-primary(12px, 24px);
+}

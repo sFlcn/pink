@@ -1,0 +1,9 @@
+.likes__text {
+  @include font-accent(12px, 24px);
+}
+
+.likes__button {
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/heart.svg");
+}

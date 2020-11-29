@@ -3,14 +3,110 @@
   background-color: $mirage;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center bottom 271px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/back--tablet.jpg");
+    background-size: auto;
+    background-position: center top;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/back--desktop.jpg");
+  }
+}
+
+.page-header__nav {
+  background-color: rgba(#000000, 0.3);
+
+  &--open {
+    background-color: $palette-prime;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: rgba(#000000, 0.3);
+  }
+}
+
+.page-header__wrapper {
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-content;
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+  }
+}
+
+.page-header__headline {
+  min-height: 171px;
+
+  &--promo {
+    min-height: 396px;
+    background-image: url("https://via.placeholder.com/320x286");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom 271px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 330px;
+    background-position: center bottom;
+
+    &--promo {
+      min-height: 619px;
+      background-image: url("https://via.placeholder.com/660x545");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 284px;
+
+    &--promo {
+      min-height: 743px;
+      background-image: url("https://via.placeholder.com/1050x645");
+    }
+  }
 }
 
 .page-header__title {
   @include font-menu(24px, 33px, 300, $palette-brightcontrast);
-  padding: 25px 20px;
+  text-align: center;
+  padding: 25px 0;
+  margin: 0;
 
-  &--main {
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  &--promo {
     line-height: 120%;
+
+    @media (min-width: $tablet-width) {
+      width: 300px;
+      font-size: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 50px;
+      line-height: 68px;
+    }
+  }
+}
+
+.page-header__download {
+  min-width: 280px;
+  margin-top: 320px;
+  background-color: $mirage;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    background: none;
   }
 }

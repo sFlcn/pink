@@ -1,11 +1,9 @@
 .main-nav {
   @include font-menu();
-  padding: 21px 20px;
-  background-color: rgba(#000000, 0.3);
-
-  &--open {
-    background-color: $palette-prime;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 23px 0;
 }
 
 .main-nav__logo {
@@ -21,6 +19,7 @@
 .main-nav__menu-button {
   width: 50px;
   height: 24px;
+  margin-left: auto;
   background-image: url("../img/menu-btn--close.svg");
   background-color: transparent;
   background-repeat: no-repeat;
@@ -32,13 +31,36 @@
     height: 23px;
     background-image: url("../img/menu-btn--open.svg");
   }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
   @include list();
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 66%;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
 }
 
 .main-nav__item a {
+  padding: 5px;
   text-transform: uppercase;
   text-decoration: none;
   color: $palette-brightcontrast;

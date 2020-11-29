@@ -5,6 +5,20 @@
   background-color: $palette-backs;
 }
 
+.price__wrapper {
+  @include wrapper;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .price__table {
-  margin-bottom: 30px;
+  min-width: $tablet-content;
+}
+
+.price__toggles {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

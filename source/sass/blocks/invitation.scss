@@ -1,3 +1,36 @@
+.invitation {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.invitation__wrapper {
+  @include wrapper;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.invitation__image {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.invitation__description {
+  display: flex;
+  flex-direction: column;
+}
+
 .invitation__title {
   @include font-titles(30px, 36px);
 }

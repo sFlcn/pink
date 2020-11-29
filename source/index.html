@@ -2,18 +2,19 @@
 <html class="page" lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav main-nav--open">
+      <nav class="page-header__nav">
+        <div class="page-header__wrapper main-nav">
           <a class="main-nav__logo"></a>
-          <button class="main-nav__menu-button main-nav__menu-button--open button" type="button">
+          <button class="main-nav__menu-button button" type="button">
             <span class="visually-hidden">Меню</span>
           </button>
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__list--hidden">
             <li class="main-nav__item main-nav__item--current">
               <a>Главная</a>
             </li>
@@ -27,25 +28,26 @@
               <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
             </li>
           </ul>
-        </nav>
-        <div class="page-header__headline">
-          <h1 class="page-header__title page-header__title--main">Взгляните на жизнь иначе!</h1>
-          <img class="page-header__image" src="https://via.placeholder.com/320x286" width="320" height="286" alt="Приложение PINK в телефоне.">
         </div>
-        <div class="page-header__download download">
-          <a class="download__link button" href="https://www.apple.com/app-store/" target="_blank">Скачать приложение</a>
-          <ul class="download__platforms">
-              <li class="download__platform">
-                <a class="download__alt-link download__alt-link--appstore" href="https://www.apple.com/app-store/" target="_blank"><span class="visually-hidden">App Store</span></a>
-              </li>
-              <li class="download__platform">
-                <a class="download__alt-link download__alt-link--googleplay" href="https://play.google.com/store/" target="_blank"><span class="visually-hidden">Google Play</span></a>
-              </li>
-              <li class="download__platform">
-                <a class="download__alt-link download__alt-link--microsoftstore" href="https://www.microsoft.com/store/" target="_blank"><span class="visually-hidden">Microsoft Store</span></a>
-              </li>
-            </ul>
-          <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </nav>
+      <div class="page-header__headline page-header__headline--promo">
+        <div class="page-header__wrapper">
+          <h1 class="page-header__title page-header__title--promo">Взгляните на&nbsp;жизнь иначе!</h1>
+          <div class="page-header__download download">
+            <a class="download__link button" href="https://www.apple.com/app-store/" target="_blank">Скачать приложение</a>
+            <ul class="download__platforms">
+                <li class="download__platform">
+                  <a class="download__alt-link download__alt-link--appstore" href="https://www.apple.com/app-store/" target="_blank"><span class="visually-hidden">App Store</span></a>
+                </li>
+                <li class="download__platform">
+                  <a class="download__alt-link download__alt-link--googleplay" href="https://play.google.com/store/" target="_blank"><span class="visually-hidden">Google Play</span></a>
+                </li>
+                <li class="download__platform">
+                  <a class="download__alt-link download__alt-link--microsoftstore" href="https://www.microsoft.com/store/" target="_blank"><span class="visually-hidden">Microsoft Store</span></a>
+                </li>
+              </ul>
+            <p class="download__description">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+          </div>
         </div>
       </div>
     </header>

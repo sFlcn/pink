@@ -2,18 +2,19 @@
 <html class="page" lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav main-nav--open">
+      <nav class="page-header__nav">
+        <div class="page-header__wrapper main-nav">
           <a class="main-nav__logo" href="index.html"></a>
-          <button class="main-nav__menu-button main-nav__menu-button--open button" type="button">
+          <button class="main-nav__menu-button button" type="button">
             <span class="visually-hidden">Меню</span>
           </button>
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__list--hidden">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
@@ -27,10 +28,10 @@
               <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
             </li>
           </ul>
-        </nav>
-        <div class="page-header__headline">
-          <h1 class="page-header__title page-header__title--main">Фотографии<br>пользователей</h1>
         </div>
+      </nav>
+      <div class="page-header__headline">
+          <h1 class="page-header__title page-header__title--main">Фотографии<br>пользователей</h1>
       </div>
     </header>
 

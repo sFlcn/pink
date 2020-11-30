@@ -1,4 +1,24 @@
 .page-footer {
-  padding: 40px 74px;
+  padding: 25px 0;
   background-color: $palette-brightcontrast;
+}
+
+.page-footer__wrapper {
+  @include wrapper;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  padding: 15px;
+}
+
+.page-footer__social {
+  padding: 26px 47px;
 }

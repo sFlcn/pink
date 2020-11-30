@@ -16,3 +16,17 @@ $palette-outlines: $mercury;
 $palette-backs: $concrete;
 $palette-darkcontrast: #000000;
 $palette-brightcontrast: #ffffff;
+
+
+// Content
+
+// Viewports
+$mobile-width-only: 320px;
+// $mobile-large-width: 425px;
+$tablet-width: 660px;
+$desktop-width: 960px;
+
+// content
+$mobile-content: $mobile-width-only - 40; //280
+$tablet-content: $tablet-width - 40; //620
+$desktop-content: $desktop-width - 20; //940

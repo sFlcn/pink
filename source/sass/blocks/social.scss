@@ -1,5 +1,12 @@
 .social__list {
   @include list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social__item {
+  padding: 4px;
 }
 
 .social__link {

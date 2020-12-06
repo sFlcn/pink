@@ -2,23 +2,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 0;
 }
 
 .download__link {
   @include font-menu(18px, 18px, bold);
   display: block;
-  width: $mobile-content;
-  height: 55px;
+  width: 100%;
+  min-height: 55px;
+  margin-bottom: 16px;
   box-sizing: border-box;
   border: 3px solid $palette-brightcontrast;
   border-radius: 39px;
+  transition: 0.42s ease-out;
+
+  &:hover,
+  &:focus {
+    color: $palette-accent;
+    background-color: $palette-brightcontrast;
+  }
+
+  &:active {
+    color: rgba($palette-accent, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
+    font-size: 21px;
+  }
 }
 
 .download__platforms {
   @include list;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+}
+
+.download__platform {
+  padding: 17px;
 }
 
 .download__alt-link {
@@ -35,20 +61,32 @@
   }
 
   &--googleplay {
-    width: 43px;
-    height: 47px;
+    width: 47px;
+    height: 56px;
     background-image: url("../img/logo--android.svg");
   }
 
   &--microsoftstore {
-    width: 44px;
-    height: 41px;
+    width: 47px;
+    height: 56px;
     background-image: url("../img/logo--microsoft.svg");
   }
 }
 
 .download__description {
   @include font-menu(14px, 24px, 300);
-  max-width: 300px;
+  max-width: $mobile-content;
+  margin: 3.5px 0;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: unset;
+    margin: 16px 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 33px 0;
+  }
 }

@@ -1,14 +1,12 @@
 .page-header {
-  background-image: url("../img/back--mobile.jpg");
+  background-image: url("../img/back--tablet.jpg");
   background-color: $mirage;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom 271px;
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center top;
 
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/back--tablet.jpg");
-    background-size: auto;
-    background-position: center top;
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../img/back--mobile.jpg");
   }
 
   @media (min-width: $desktop-width) {
@@ -34,6 +32,7 @@
 
 .page-header__wrapper {
   margin: 0;
+  padding: 0 20px;
 
   @media (min-width: $desktop-width) {
     width: $desktop-content;
@@ -44,69 +43,86 @@
 }
 
 .page-header__headline {
-  min-height: 171px;
-
-  &--promo {
-    min-height: 396px;
-    background-image: url("https://via.placeholder.com/320x286");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center bottom 271px;
-  }
+  min-height: 142px;
+  padding-top: 28px;
 
   @media (min-width: $tablet-width) {
-    min-height: 330px;
+    min-height: 263px;
+    padding-top: 67px;
     background-position: center bottom;
-
-    &--promo {
-      min-height: 619px;
-      background-image: url("https://via.placeholder.com/660x545");
-    }
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 284px;
+    min-height: 225px;
+    padding-top: 59px;
+    max-width: $desktop-content;
+    margin: 0 auto;
+  }
+}
 
-    &--promo {
-      min-height: 743px;
-      background-image: url("https://via.placeholder.com/1050x645");
-    }
+.page-header--promo .page-header__headline {
+  padding-top: 25px;
+  background-image: url("../img/pink-promo-small.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center top 109px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 525px;
+    padding-top: 94px;
+    background-image: url("../img/pink-promo-medium.png");
+    background-position: center bottom;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 644px;
+    padding-top: 99px;
+    background-image: url("../img/pink-promo-large.png");
+    background-position: left 16px bottom;
   }
 }
 
 .page-header__title {
   @include font-menu(24px, 33px, 300, $palette-brightcontrast);
   text-align: center;
-  padding: 25px 0;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 50px;
     line-height: 68px;
   }
+}
 
-  &--promo {
-    line-height: 120%;
+.page-header--promo .page-header__title {
+  min-height: 371px;
+  line-height: 120%;
 
-    @media (min-width: $tablet-width) {
-      width: 300px;
-      font-size: 40px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    min-height: unset;
+    margin-bottom: 2px;
+    font-size: 40px;
+  }
 
-    @media (min-width: $desktop-width) {
-      font-size: 50px;
-      line-height: 68px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 9px;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
 .page-header__download {
-  min-width: 280px;
-  margin-top: 320px;
+  padding: 27px 20px;
   background-color: $mirage;
 
   @media (min-width: $tablet-width) {
     width: 300px;
     background: none;
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      padding: 28px 0;
+      background: none;
+    }
   }
 }

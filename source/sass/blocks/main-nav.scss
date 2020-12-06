@@ -1,40 +1,110 @@
 .main-nav {
   @include font-menu();
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 23px 0;
+  width: 100%;
+  margin: 0;
+  padding-top: 12px;
+  background-color: $palette-prime;
+
+  &--closed {
+    padding-bottom: 2px;
+    background-color: unset;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-content;
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+    background-color: unset;
+  }
 }
 
 .main-nav__logo {
   display: block;
-  width: 74px;
-  height: 23px;
-  background-image: url("../img/pink_header-logo--small.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  transition: color, opacity 0.42s ease;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+    margin-bottom: 28px;
+    padding: 15px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+    height: 40px;
+    padding: 15px 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--closed .main-nav__logo {
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+    padding: 15px 0;
+  }
 }
 
 .main-nav__menu-button {
-  width: 50px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 12px;
+  padding-bottom: 9px;
   margin-left: auto;
-  background-image: url("../img/menu-btn--close.svg");
+  margin-right: 20px;
+  background-image: url("../img/menu-btn--open.svg");
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+  transition: 0.42s ease;
 
-  &--open {
-    width: 23px;
-    height: 23px;
-    background-image: url("../img/menu-btn--open.svg");
+  @media (min-width: $tablet-width) {
+    margin-top: 21px;
   }
 
   @media (min-width: $desktop-width) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--closed .main-nav__menu-button {
+  width: 50px;
+  height: 24px;
+  padding-top: 9px;
+  background-image: url("../img/menu-btn--close.svg");
 }
 
 .main-nav__list {
@@ -42,26 +112,109 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  &--hidden {
-    display: none;
-  }
+  background-color: $palette-prime;
+  box-shadow: 0 -1px 0 #000000;
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 66%;
+    max-width: 66%;
+    background-color: unset;
+    box-shadow: none;
   }
 }
 
+.main-nav--closed .main-nav__list {
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+    box-shadow: none;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  position: absolute;
+  top: 70px;
+
+  @media (min-width: $tablet-width) {
+    top: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+  }
+}
+
+.main-nav--no-js .main-nav__list {
+  position: static;
+}
+
 .main-nav__item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5px;
+  padding-bottom: 12px;
+  box-shadow: 0 1px 0 #000000,
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: 30px;
+    box-shadow: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .main-nav__item a {
-  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 4px;
   text-transform: uppercase;
   text-decoration: none;
   color: $palette-brightcontrast;
+  transition: 0.42s ease;
+
+  &:hover,
+  &:focus {
+    color: $palette-accent;
+  }
+
+  &:active {
+    color: $palette-brightcontrast;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid transparent;
+    text-transform: none;
+    font-weight: normal;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__item--current a {
+  border-bottom-color: $palette-brightcontrast;
+
+  &:hover,
+  &:focus {
+    color: unset;
+    opacity: unset;
+    cursor: default;
+  }
 }

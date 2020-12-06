@@ -15,6 +15,17 @@
   align-items: center;
   width: 48px;
   height: 48px;
+  padding: 0;
   border: 3px solid rgba($palette-prime, 0.1);
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: $palette-prime;
+  }
+
+  &:active {
+    border: 3px solid rgba($palette-prime, 0.3);
+    opacity: 0.3;
+  }
 }

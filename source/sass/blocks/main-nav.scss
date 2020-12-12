@@ -6,12 +6,19 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
+  margin-bottom: 15px;
   padding-top: 12px;
-  background-color: $palette-prime;
+  padding-bottom: 2px;
+  background-color: unset;
 
-  &--closed {
-    padding-bottom: 2px;
-    background-color: unset;
+  &--opened {
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    background-color: $palette-prime;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 32px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -25,19 +32,14 @@
 
 .main-nav__logo {
   display: block;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 11px;
-  padding-bottom: 10px;
+  margin: 0 0 0 20px;
+  padding: 10px 0;
   transition: color, opacity 0.42s ease;
 
   @media (min-width: $tablet-width) {
     width: 145px;
     height: 40px;
-    margin-bottom: 28px;
-    padding: 15px 0;
+    padding-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -56,34 +58,24 @@
   }
 }
 
-.main-nav--closed .main-nav__logo {
-  margin-bottom: 0;
-
-  @media (min-width: $tablet-width) {
-    width: 145px;
-    height: 40px;
-    padding: 15px 0;
-  }
-}
-
 .main-nav__menu-button {
-  width: 23px;
-  height: 23px;
+  width: 50px;
+  height: 24px;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 12px;
+  padding-top: 9px;
   padding-bottom: 9px;
   margin-left: auto;
   margin-right: 20px;
-  background-image: url("../img/menu-btn--open.svg");
+  background-image: url("../img/menu-btn--close.svg");
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  transition: 0.42s ease;
+  transition: color, opacity 0.42s ease;
 
   @media (min-width: $tablet-width) {
-    margin-top: 21px;
+    margin-top: 22px;
   }
 
   @media (min-width: $desktop-width) {
@@ -100,11 +92,15 @@
   }
 }
 
-.main-nav--closed .main-nav__menu-button {
-  width: 50px;
-  height: 24px;
-  padding-top: 9px;
-  background-image: url("../img/menu-btn--close.svg");
+.main-nav--opened .main-nav__menu-button {
+  width: 23px;
+  height: 23px;
+  padding-top: 12px;
+  background-image: url("../img/menu-btn--open.svg");
+
+  @media (min-width: $tablet-width) {
+    padding-top: 9px;
+  }
 }
 
 .main-nav__list {
@@ -135,6 +131,7 @@
 .main-nav--opened .main-nav__list {
   position: absolute;
   top: 70px;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     top: 110px;

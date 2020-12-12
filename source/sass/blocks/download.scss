@@ -30,7 +30,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 56px;
     margin-bottom: 53px;
+    padding-top: 16px;
     font-size: 21px;
   }
 }

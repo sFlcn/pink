@@ -9,14 +9,14 @@
   <body class="page__body">
     <header class="page-header">
       <nav class="page-header__nav">
-        <div class="page-header__wrapper main-nav">
+        <div class="main-nav main-nav--no-js">
           <a class="main-nav__logo" href="index.html">
             <img src="../img/pink_header-logo--small.svg" width="74" height="23" alt="Логотип Pink.">
           </a>
           <button class="main-nav__menu-button button" type="button">
             <span class="visually-hidden">Меню</span>
           </button>
-          <ul class="main-nav__list main-nav__list--hidden">
+          <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
@@ -33,7 +33,9 @@
         </div>
       </nav>
       <div class="page-header__headline">
+        <div class="page-header__wrapper">
           <h1 class="page-header__title page-header__title--main">Фотографии<br>пользователей</h1>
+        </div>
       </div>
     </header>
 
@@ -274,5 +276,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

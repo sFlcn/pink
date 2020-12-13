@@ -1,8 +1,15 @@
 .invitation {
   display: none;
+  padding: 54px 0;
 
   @media (min-width: $tablet-width) {
     display: block;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 17px;
+      padding-bottom: 68px;
+      background-color: $palette-backs;
+    }
   }
 }
 
@@ -24,22 +31,69 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+
+  @media (min-width: $desktop-width) {
+    width: 298px;
+    height: 345px;
+  }
 }
 
 .invitation__description {
   display: flex;
   flex-direction: column;
+  padding-top: 42px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 96px;
+    padding-bottom: 5px;
+    padding-left: 57px;
+    padding-right: 36px;
+  }
 }
 
 .invitation__title {
   @include font-titles(30px, 36px);
+  margin: 0;
+  margin-bottom: 10px;
+  padding-right: 20px;
+
+  @media (min-width: $desktop-width) {
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
 }
 
 .invitation__text {
   @include font-primary;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 31px;
+  }
 }
 
 .invitation__link {
   @include font-accent($line-height: 24px);
   text-decoration: underline;
+  margin: 0;
+  transition: 0.42s ease;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: $palette-prime;
+    text-decoration: none;
+    opacity: 0.3;
+  }
 }

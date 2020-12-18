@@ -49,18 +49,18 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 15.5%;
+    height: 4%;
     background-color: $palette-brightcontrast;
-    clip-path: polygon(0% 0%, 100% 0%, 0% 27%);
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
     z-index: -1;
 
     @media (min-width: $tablet-width) {
-      height: 41%;
+      height: 11%;
     }
 
     @media (min-width: $desktop-width) {
-      height: 51%;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 1.3%, 0% 27%);
+      height: 13.8%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 4.5%, 0% 100%);
     }
   }
 

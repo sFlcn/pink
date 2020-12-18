@@ -1,24 +1,87 @@
 .price {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  overflow: hidden;
-  background-color: $palette-backs;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3.8%;
+    background-color: $palette-brightcontrast;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      height: 10.7%;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 15.9%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 4.5%, 0% 100%);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $palette-backs;
+    z-index: -2;
+  }
 }
 
 .price__wrapper {
-  @include wrapper;
-  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto 0;
+  padding: 76px 0 32px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 73px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 126px;
+    padding-bottom: 71px;
+  }
+}
+
+.price__slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 25px 0;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width - 1) {
+    margin: 0;
+  }
 }
 
 .price__table {
-  min-width: $tablet-content;
+  min-width: 836px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    min-width: 618px;
+  }
 }
 
 .price__toggles {
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.price__slider .price__table {
+  transform: translateX(0);
 }

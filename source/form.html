@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
+
     <header class="page-header">
       <nav class="page-header__nav">
         <div class="main-nav main-nav--no-js">
@@ -41,13 +42,16 @@
 
     <main class="page-main">
       <section class="contest">
-        <div class="contest__wrapper">
-          <div class="contest__intro intro">
-            <h2 class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__title-addition" hidden>Пожалуйста, заполните форму ниже:</span></h2>
-          </div>
-          <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+        <div class="contest__wrapper contest__intro intro">
+          <h2 class="intro__text">
+            Поделитесь своей историей и получите шанс выиграть ценный приз&nbsp;— 1000 миль на вашу&nbsp;бонусную&nbsp;карту!
+            <span class="intro__text-addition">Пожалуйста,&nbsp;заполните&nbsp;форму&nbsp;ниже:</span>
+          </h2>
+        </div>
+        <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
-            <fieldset class="form__fieldset form__fieldset--name">
+          <div class="form__container form__container--data form__container--name">
+            <fieldset class="form__fieldset">
               <legend class="visually-hidden">Как вас зовут?</legend>
               <ul class="form__inputs">
                 <li class="form__input">
@@ -70,9 +74,57 @@
                 </li>
               </ul>
             </fieldset>
+          </div>
 
-            <fieldset class="form__fieldset form__fieldset--achievements">
-              <legend class="form__legend form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
+          <div class="form__container form__container--app">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">С каким приложением путешествовали?</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--app">
+                    Pink для iOS
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="ios" checked>
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--app">
+                    Pink на Android
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="android">
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--app">
+                    Windows Phone
+                    <input class="form__radio-input" type="radio" name="form__radio--app" value="windows">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form__container form__container--data form__container--contacts">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Контактная информация</legend>
+              <ul class="form__inputs">
+                <li class="form__input">
+                  <label class="form__label form__label--contacts">
+                    Номер телефона
+                    <input class="form__text-input" type="text" name="form__phone" placeholder="Номер, пожалуйста">
+                  </label>
+                </li>
+                <li class="form__input">
+                  <label class="form__label form__label--contacts">
+                    Адрес почты
+                    <input class="form__text-input" type="text" name="form__email" placeholder="Введите почту *" required>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form__container form__container--achievements">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
               <ul class="form__inputs">
                 <li class="form__input">
                   <label class="form__label form__label--achievements">
@@ -112,62 +164,23 @@
                 </li>
               </ul>
             </fieldset>
+          </div>
 
-            <fieldset class="form__fieldset form__fieldset--contacts">
-              <legend class="visually-hidden">Контактная информация</legend>
-              <ul class="form__inputs">
-                <li class="form__input">
-                  <label class="form__label form__label--contacts">
-                    Номер телефона
-                    <input class="form__text-input" type="text" name="form__phone" placeholder="Номер, пожалуйста">
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--contacts">
-                    Адрес почты
-                    <input class="form__text-input" type="text" name="form__email" placeholder="Введите почту *" required>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="form__fieldset form__fieldset--app">
-              <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
-              <ul class="form__inputs">
-                <li class="form__input">
-                  <label class="form__label form__label--app">
-                    Pink для iOS
-                    <input class="form__radio-input" type="radio" name="form__radio--app" value="ios" checked>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--app">
-                    Pink на Android
-                    <input class="form__radio-input" type="radio" name="form__radio--app" value="android">
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--app">
-                    Windows Phone
-                    <input class="form__radio-input" type="radio" name="form__radio--app" value="windows">
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="form__fieldset form__fieldset--message">
-              <legend class="form__legend form__legend--message">Опишите свои эмоции</legend>
-              <div class="form__input">
-                <textarea class="form__textarea-input" id="form__message" name="form__message" cols="24" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <div class="form__container form__container--message">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Опишите свои эмоции</legend>
+              <div class="form__inputs">
+                <textarea class="form__textarea-input" id="form__message" name="form__message" cols="20" rows="5"
+                placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </div>
             </fieldset>
+          </div>
 
-            <div class="form__buttons">
-              <input class="form__submit button" type="submit" value="Отправить форму">
-              <p class="form__requirements"><span class="form__mark">*</span> — обязательные поля</p>
-            </div>
-          </form>
-        </div>
+          <div class="form__container form__container--buttons">
+            <input class="form__submit button" type="submit" value="Отправить форму">
+            <p class="form__requirements"><span class="form__mark">*</span> — обязательные поля</p>
+          </div>
+        </form>
       </section>
     </main>
 
@@ -210,10 +223,10 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             <span>Разработано</span>
-            <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="none">
+            <svg class="page-footer__copyright-icon" width="27" height="34" viewBox="0 0 27 34" fill="none">
               <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
             </svg>
             <span class="visually-hidden">HTML Academy</span>

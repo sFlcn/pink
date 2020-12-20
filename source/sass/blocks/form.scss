@@ -1,46 +1,130 @@
 .form {
   @include font-primary(18px, 30px);
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+    max-width: $desktop-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form__container {
+  margin: 0;
+  padding: 20px 20px;
+
+  &:nth-child(even) {
+    background-color: $palette-backs;
+
+    @media (min-width: $tablet-width) {
+      background-color: $palette-brightcontrast;
+    }
+  }
+
+  &--data {
+    text-transform: uppercase;
+  }
+
+  &:nth-child(n+3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &--name {
+    order: -10;
+
+    @media (min-width: $tablet-width) {
+      order: unset;
+    }
+  }
+
+  &--app {
+    order: -7;
+
+    @media (min-width: $tablet-width) {
+      order: unset;
+    }
+  }
+
+  &--contacts {
+    order: -8;
+
+    @media (min-width: $tablet-width) {
+      order: unset;
+    }
+  }
+
+  &--achievements {
+    order: -9;
+
+    @media (min-width: $tablet-width) {
+      order: unset;
+    }
+  }
 }
 
 .form__legend {
   @include font-accent(14px, 18px);
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: inherit;
+}
+
+.form__container:not(:first-child) .form__fieldset {
+  padding: 5px 0;
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $palette-outlines;
+  }
 }
 
 .form__fieldset {
-  padding: 42px 22px;
+  margin: 0;
+  padding: 0;
   border: 0;
-  background-color: $palette-brightcontrast;
-
-  &:nth-child(even) {
-    background-color: $palette-backs;
-  }
+  background-color: inherit;
 }
 
 .form__label {
   @include font-primary(18px, 30px);
+}
 
-  &--name {
-    @include font-accent(14px, 30px);
-  }
-
-  &--contacts {
-    @include font-accent(14px, 30px);
-  }
+.form__container--data .form__label {
+  @include font-accent(14px, 30px);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .form__inputs {
   @include list;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px;
+  }
 }
 
 .form__text-input,
 .form__textarea-input {
   @include font-primary(18px, 30px, 700, $palette-prime);
-  padding: 20px 23px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 18px;
   border: 2px solid $palette-outlines;
 
   &::placeholder {
     @include font-primary(18px, 30px, 400, $palette-prime);
   }
+}
+
+.form__textarea-input {
+  resize: vertical;
 }
 
 .form__submit {

@@ -1,6 +1,16 @@
 .page-footer {
   padding: 25px 0;
   background-color: $palette-brightcontrast;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 12px;
+    padding-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+    padding-bottom: 48px;
+  }
 }
 
 .page-footer__wrapper {
@@ -16,9 +26,59 @@
 }
 
 .page-footer__logo {
-  padding: 15px;
+  padding: 15px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-icon {
+  @media (min-width: $desktop-width) {
+    width: 147px;
+  }
 }
 
 .page-footer__social {
-  padding: 26px 47px;
+  margin-bottom: 8px;
+  padding: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 23px;
+  }
+}
+
+.page-footer__copyright-link {
+  @include font-primary(14px, 18px);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.page-footer__copyright-icon {
+  margin-left: 15px;
+  padding: 15px 0;
+}
+
+.page-footer__copyright-link:active .page-footer__copyright-icon {
+  opacity: 0.3;
 }

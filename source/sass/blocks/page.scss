@@ -6,7 +6,7 @@
 
 .page__body {
   min-height: 100%;
-  min-width: 320px;
+  min-width: $mobile-width-only - 20;
   margin: 0;
   padding: 0;
   text-transform: none;

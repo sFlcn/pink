@@ -50,133 +50,123 @@
         </div>
         <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
-          <div class="form__container form__container--data form__container--name">
-            <fieldset class="form__fieldset">
-              <legend class="visually-hidden">Как вас зовут?</legend>
-              <ul class="form__inputs">
-                <li class="form__input">
-                  <label class="form__label form__label--name">
-                    Фамилия:
-                    <input class="form__text-input" type="text" name="form__surname" placeholder="Укажите фамилию *" required>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--name">
-                    Имя:
-                    <input class="form__text-input" type="text" name="form__first-name" placeholder="Введите ваше имя *" required>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--name">
-                    Отчество:
-                    <input class="form__text-input" type="text" name="form__patronymic" placeholder="Ну и отчество тоже">
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="form__container form__container--data form__container--name">
+            <legend class="visually-hidden">Как вас зовут?</legend>
+            <ul class="form__inputs">
+              <li class="form__input">
+                <label class="form__label">
+                  Фамилия:
+                  <input class="form__text-input" type="text" name="form__surname" placeholder="Укажите фамилию *" required>
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Имя:
+                  <input class="form__text-input" type="text" name="form__first-name" placeholder="Введите ваше имя *" required>
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Отчество:
+                  <input class="form__text-input" type="text" name="form__patronymic" placeholder="Ну и отчество тоже">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <div class="form__container form__container--app">
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">С каким приложением путешествовали?</legend>
-              <ul class="form__inputs">
-                <li class="form__input">
-                  <label class="form__label form__label--app">
-                    Pink для iOS
-                    <input class="form__radio-input" type="radio" name="form__radio--app" value="ios" checked>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--app">
-                    Pink на Android
-                    <input class="form__radio-input" type="radio" name="form__radio--app" value="android">
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--app">
-                    Windows Phone
-                    <input class="form__radio-input" type="radio" name="form__radio--app" value="windows">
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="form__container form__container--app">
+            <legend class="form__legend">С каким приложением путешествовали?</legend>
+            <ul class="form__inputs">
+              <li class="form__input">
+                <label class="form__label">
+                  Pink для iOS
+                  <input class="form__radio-input" type="radio" name="form__radio--app" value="ios" checked>
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Pink на Android
+                  <input class="form__radio-input" type="radio" name="form__radio--app" value="android">
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Windows Phone
+                  <input class="form__radio-input" type="radio" name="form__radio--app" value="windows">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <div class="form__container form__container--data form__container--contacts">
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Контактная информация</legend>
-              <ul class="form__inputs">
-                <li class="form__input">
-                  <label class="form__label form__label--contacts">
-                    Номер телефона
-                    <input class="form__text-input" type="text" name="form__phone" placeholder="Номер, пожалуйста">
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--contacts">
-                    Адрес почты
-                    <input class="form__text-input" type="text" name="form__email" placeholder="Введите почту *" required>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="form__container form__container--data form__container--contacts">
+            <legend class="form__legend">Контактная информация</legend>
+            <ul class="form__inputs">
+              <li class="form__input">
+                <label class="form__label">
+                  Номер телефона
+                  <input class="form__text-input" type="text" name="form__phone" placeholder="Номер, пожалуйста">
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Адрес почты
+                  <input class="form__text-input" type="text" name="form__email" placeholder="Введите почту *" required>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <div class="form__container form__container--achievements">
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
-              <ul class="form__inputs">
-                <li class="form__input">
-                  <label class="form__label form__label--achievements">
-                    Сделал селфи с акулой
-                    <input class="form__check-input" type="checkbox" name="form__check--shark-selfie" checked>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--achievements">
-                    Обгорел на пляже
-                    <input class="form__check-input" type="checkbox" name="form__check--burn" checked>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--achievements">
-                    Видел Чака Норриса
-                    <input class="form__check-input" type="checkbox" name="form__check--norris">
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--achievements">
-                    Накупил сувениров
-                    <input class="form__check-input" type="checkbox" name="form__check--souvenirs">
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--achievements">
-                    Удержал башню
-                    <input class="form__check-input" type="checkbox" name="form__check--tower" checked>
-                  </label>
-                </li>
-                <li class="form__input">
-                  <label class="form__label form__label--achievements">
-                    Разгромил отель
-                    <input class="form__check-input" type="checkbox" name="form__check--trashed-hotel">
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="form__container form__container--achievements">
+            <legend class="form__legend">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</legend>
+            <ul class="form__inputs">
+              <li class="form__input">
+                <label class="form__label">
+                  Сделал селфи с акулой
+                  <input class="form__check-input" type="checkbox" name="form__check--shark-selfie" checked>
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Обгорел на пляже
+                  <input class="form__check-input" type="checkbox" name="form__check--burn" checked>
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Видел Чака Норриса
+                  <input class="form__check-input" type="checkbox" name="form__check--norris">
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Накупил сувениров
+                  <input class="form__check-input" type="checkbox" name="form__check--souvenirs">
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Удержал башню
+                  <input class="form__check-input" type="checkbox" name="form__check--tower" checked>
+                </label>
+              </li>
+              <li class="form__input">
+                <label class="form__label">
+                  Разгромил отель
+                  <input class="form__check-input" type="checkbox" name="form__check--trashed-hotel">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <div class="form__container form__container--message">
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Опишите свои эмоции</legend>
-              <div class="form__inputs">
-                <textarea class="form__textarea-input" id="form__message" name="form__message" cols="20" rows="5"
-                placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-              </div>
-            </fieldset>
-          </div>
+          <fieldset class="form__container form__container--message">
+            <legend class="form__legend">Опишите свои эмоции</legend>
+            <div class="form__inputs">
+              <textarea class="form__textarea-input" id="form__message" name="form__message" cols="20" rows="5"
+              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
+          </fieldset>
 
-          <div class="form__container form__container--buttons">
+          <div class="form__buttons">
             <input class="form__submit button" type="submit" value="Отправить форму">
             <p class="form__requirements"><span class="form__mark">*</span> — обязательные поля</p>
           </div>

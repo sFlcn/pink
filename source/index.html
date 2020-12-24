@@ -37,7 +37,11 @@
         <div class="page-header__wrapper">
           <h1 class="page-header__title">Взгляните на&nbsp;жизнь<br>иначе!</h1>
         </div>
-        <img class="page-header__illustration" src="../img/phone--desktop.png" width="320" height="286" alt="Приложение PINK в смартфоне">
+        <picture>
+          <source media="(min-width: 960px)" srcset="../img/phone--desktop.png 1x, ../img/phone--desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="../img/phone--tablet.png 1x, ../img/phone--tablet@2x.png 2x">
+          <img class="page-header__illustration" src="../img/phone--mobile.png" srcset="../img/phone--mobile@2x.png 2x" width="320" height="286" alt="Приложение PINK в смартфоне">
+        </picture>
       </div>
       <div class="page-header__container">
         <div class="page-header__download download">
@@ -74,7 +78,7 @@
                 <p class="features__description">Приложение позволит&nbsp;вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
                 <div class="features__image">
                   <div class="features__image-container">
-                    <img src="../img/pink-app__gray.png" width="186" height="382" alt="Скриншот приложения Pink">
+                    <img src="../img/pink-app__gray.png" srcset="../img/pink-app__gray@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink">
                   </div>
                 </div>
               </li>
@@ -83,7 +87,7 @@
                 <p class="features__description">Сделайте снимок и украсьте&nbsp;его смайликом или&nbsp;текстовой подписью, чтобы усилить&nbsp;эффект</p>
                 <div class="features__image">
                   <div class="features__image-container">
-                    <img src="../img/pink-app__fill.png" width="186" height="382" alt="Скриншот приложения Pink">
+                    <img src="../img/pink-app__fill.png" srcset="../img/pink-app__fill@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink">
                   </div>
                 </div>
               </li>
@@ -92,13 +96,16 @@
                 <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                 <div class="features__image">
                   <div class="features__image-container">
-                    <img src="../img/pink-app__smile.png" width="186" height="382" alt="Скриншот приложения Pink">
+                    <img src="../img/pink-app__smile.png" srcset="../img/pink-app__smile@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink">
                   </div>
                 </div>
               </li>
             </ul>
             <div class="features__example-picture">
-              <img src="../img/pink-app__smile--big.png" width="157" height="320" alt="Скриншот приложения Pink">
+              <picture>
+                <source media="(min-width: 660px)" srcset="../img/pink-app__smile--big.png 1x, ../img/pink-app__smile--big@2x.png 2x">
+                <img src="../img/pink-app__smile--small.png" srcset="../img/pink-app__smile--small@2x.png 2x" width="157" height="320" alt="Скриншот приложения Pink">
+              </picture>
             </div>
           </div>
         </div>
@@ -111,7 +118,10 @@
             <p class="invitation__text">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
             <a class="invitation__link" href="#">Узнать больше об исследовании</a>
           </div>
-          <img class="invitation__image" src="../img/round-diagram--medium.svg" width="238" height="276" alt="Иллюстрация к статье">
+          <picture>
+            <source media="(min-width: 960px)" srcset="../img/round-diagram--big.svg">
+            <img class="invitation__image" src="../img/round-diagram--medium.svg" width="238" height="276" alt="Иллюстрация к статье">
+          </picture>
         </div>
       </section>
 

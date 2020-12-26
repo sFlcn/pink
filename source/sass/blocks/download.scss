@@ -9,7 +9,7 @@
   display: block;
   width: 100%;
   min-height: 55px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   box-sizing: border-box;
   border: 3px solid $palette-brightcontrast;
   border-radius: 39px;
@@ -26,12 +26,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 56px;
-    margin-bottom: 53px;
+    margin-bottom: 50px;
     padding-top: 16px;
     font-size: 21px;
   }
@@ -41,12 +41,19 @@
   @include list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  align-items: baseline;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .download__platform {
-  padding: 17px;
+  padding: 17.5px;
 }
 
 .download__alt-link {
@@ -60,18 +67,42 @@
     width: 47px;
     height: 56px;
     background-image: url("../img/logo--apple.svg");
+
+    @media (min-width: $desktop-width) {
+      margin-left: 1px;
+    }
   }
 
   &--googleplay {
-    width: 47px;
-    height: 56px;
+    width: 43px;
+    height: 47px;
+    margin-bottom: 3px;
     background-image: url("../img/logo--android.svg");
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 1px;
+      margin-right: 1px;
+    }
   }
 
   &--microsoftstore {
-    width: 47px;
-    height: 56px;
+    width: 44px;
+    height: 41px;
+    margin-bottom: 3px;
     background-image: url("../img/logo--microsoft.svg");
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 3px;
+      margin-right: 2px;
+    }
   }
 }
 
@@ -83,12 +114,12 @@
 
   @media (min-width: $tablet-width) {
     max-width: unset;
-    margin: 16px 0;
+    margin: 15px 0;
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 33px 0;
+    margin: 34px 0;
   }
 }

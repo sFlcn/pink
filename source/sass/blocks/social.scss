@@ -7,6 +7,10 @@
 
 .social__item {
   padding: 4px;
+
+  @media (min-width: $desktop-width) {
+    padding: 2.5px;
+  }
 }
 
 .social__link {

@@ -2,8 +2,57 @@
   background-color: $palette-brightcontrast;
 }
 
+.album__wrapper {
+  @include wrapper;
+}
+
 .album__list {
   @include list;
+  @include wrapper;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2%;
+  }
+}
+
+.album__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &--featured {
+    position: relative;
+
+    &::before {
+      content: "Панорама\a0дня";
+      position: absolute;
+      top: 0;
+      right: 20px;
+      min-width: 140px;
+      min-height: 5%;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $palette-brightcontrast;
+      background-color: $palette-accent;
+      z-index: 2;
+    }
+  }
+}
+
+.album__photo {
+  display: block;
+  width: 100%;
 }
 
 .album__description {
@@ -12,8 +61,23 @@
 }
 
 .album__caption {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 17px;
   background-color: $palette-backs;
-  padding: 25px 10px 25px 17px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 31px 27px;
+  }
+}
+
+.album__item--featured .album__caption {
+  @include wrapper;
 }
 
 .album__author {
@@ -25,5 +89,9 @@
 }
 
 .album__comment {
-  @include font-primary(12px, 24px);
+  @include font-primary(14px, 24px);
+}
+
+.album__likes {
+  margin-top: auto;
 }

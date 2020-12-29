@@ -80,3 +80,12 @@
     background-position: center;
   }
 }
+
+@mixin retina-background($file-name, $file-type, $file-width) {
+  background-image: url("../img/" + $file-name + "." + $file-type);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/" + $file-name + "@2x." + $file-type);
+    background-size: $file-width;
+  }
+}

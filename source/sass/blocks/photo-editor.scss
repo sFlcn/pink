@@ -1,5 +1,69 @@
-.photo-editor {
+.photo-editor__wrapper {
+  @include wrapper;
+}
+
+.photo-editor__intro {
+  text-align: center;
+}
+
+.photo-editor__text {
+  @include font-primary(14px, 30px);
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.photo-editor__interface {
+  padding: 0;
   background-color: $palette-backs;
+  padding-top: 20px;
+  padding-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-content;
+    margin: auto;
+  }
+}
+
+.photo-editor__image {
+  display: block;
+  margin: auto;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.photo-editor__controls {
+  margin: 27px 0 38px 0;
+  padding: 0 20px 0 20px;
+  border: none;
+  border-bottom: 1px solid rgba($palette-prime, 0.1);
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-right: 60px;
+  }
+}
+
+.photo-editor__tools-selectors {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .photo-editor__tool {
@@ -8,14 +72,73 @@
   background-color: transparent;
 }
 
+.photo-editor__range {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 85.714286%;
+  margin: 0 (7.142857%);
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 20px 0 20px 55px;
+    border-bottom: 1px solid rgba($palette-prime, 0.1);
+  }
+
+  &:not(.photo-editor__range--current) {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.photo-editor__range input {
+  width: 100%;
+  margin: 0;
+}
+
+.photo-editor__buttons {
+  margin: 0 20px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 60px;
+  }
+}
+
 .photo-editor__button {
   @include font-menu(18px, 18px, bold, rgba($palette-prime, 0.1));
   display: block;
-  width: 280px;
+  width: 100%;
   height: 55px;
   box-sizing: border-box;
   border-radius: 30px;
   border: 3px solid rgba($palette-prime, 0.1);
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 45.368%;
+  }
 
   &--upload {
     color: $palette-accent;

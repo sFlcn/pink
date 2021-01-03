@@ -1,20 +1,38 @@
 .popup {
+  display: none;
+  position: fixed;
+  top: 20.6%;
+  z-index: 100;
+  box-sizing: border-box;
+  border-radius: 1px;
   background-color: $palette-brightcontrast;
   text-align: center;
   box-shadow: 0 7px 15px $pallete-window-shadow;
-  max-width: 460px;
+
+  @media (min-width: $tablet-width) {
+    left: 50%;
+    width: 69.7%;
+    border-radius: 5px;
+    transform: translateX(-50%);
+  }
 
   @media (min-width: $desktop-width) {
     max-width: 780px;
   }
+
+  &--show {
+    display: block;
+  }
 }
 
 .popup__message-arrea {
-  padding: 52px 22px;
+  padding: 14px 22px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 105px;
-    padding-right: 105px;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    padding-left: 76px;
+    padding-right: 76px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,19 +43,33 @@
 
 .popup__subject {
   @include font-titles;
+  margin: 24.5px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .popup__text {
   @include font-primary;
+  margin: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .popup__buttons-arrea {
-  padding: 52px 22px;
+  padding: 50px 20px;
   background-color: $palette-backs;
 
   @media (min-width: $tablet-width) {
-    padding-left: 82px;
-    padding-right: 82px;
+    padding-left: 81px;
+    padding-right: 80px;
+    border-radius: 0 0 5px 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,16 +79,19 @@
 }
 
 .popup--failure .popup__buttons-arrea {
+  background-color: $palette-brightcontrast;
+  padding-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    padding-bottom: 52px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
   @media (min-width: $desktop-width) {
     padding-left: 230px;
     padding-right: 230px;
-  }
-}
-
-.popup--succes .popup__buttons-arrea {
-  background-color: $palette-brightcontrast;
-
-  @media (min-width: $desktop-width) {
     background-color: $palette-backs;
   }
 }
@@ -65,7 +100,9 @@
   @include font-menu(18px, 30px);
   box-sizing: border-box;
   width: 100%;
-  padding: 23px;
+  padding: 16.5px;
+  border-radius: 3px;
   text-align: center;
+  text-transform: uppercase;
   background-color: $palette-highlite;
 }

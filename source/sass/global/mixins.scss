@@ -89,3 +89,24 @@
     background-size: $file-width;
   }
 }
+
+@mixin colored-button($background-color, $radius: 0, $text-color: $palette-brightcontrast, $text-transform: uppercase) {
+  border-radius: $radius;
+  text-align: center;
+  text-transform: $text-transform;
+  color: $text-color;
+  background-color: $background-color;
+
+  &:hover,
+  &:focus {
+    background-color: darken(saturate($background-color, 8.84), 5.88);
+  }
+
+  &:active {
+    color: rgba($text-color, 0.3);
+  }
+
+  &:disabled {
+    background-color: $palette-outlines;
+  }
+}

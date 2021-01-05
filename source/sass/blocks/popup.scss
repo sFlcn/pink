@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 780px;
+    width: 82.54%;
   }
 
   &--show {
@@ -25,7 +25,7 @@
   }
 }
 
-.popup__message-arrea {
+.popup__message-area {
   padding: 14px 22px;
 
   @media (min-width: $tablet-width) {
@@ -36,8 +36,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 230px;
-    padding-right: 230px;
+    min-height: 214px;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    padding-left: 185px;
+    padding-right: 184px;
   }
 }
 
@@ -62,7 +65,7 @@
   }
 }
 
-.popup__buttons-arrea {
+.popup__buttons-area {
   padding: 50px 20px;
   background-color: $palette-backs;
 
@@ -73,12 +76,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 162px;
-    padding-right: 162px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 
-.popup--failure .popup__buttons-arrea {
+.popup--failure .popup__buttons-area {
   background-color: $palette-brightcontrast;
   padding-top: 7px;
 
@@ -90,19 +93,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 230px;
-    padding-right: 230px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 240px;
+    padding-right: 240px;
     background-color: $palette-backs;
   }
 }
 
 .popup__submit {
   @include font-menu(18px, 30px);
+  @include colored-button($palette-highlite, 3px, $palette-brightcontrast);
   box-sizing: border-box;
   width: 100%;
   padding: 16.5px;
-  border-radius: 3px;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $palette-highlite;
 }

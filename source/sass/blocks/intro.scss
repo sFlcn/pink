@@ -21,6 +21,10 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    white-space: pre-wrap;
+  }
 }
 
 .intro__text-addition {

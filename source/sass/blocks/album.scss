@@ -1,9 +1,30 @@
 .album {
   background-color: $palette-brightcontrast;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .album__wrapper {
   @include wrapper;
+}
+
+.album__intro {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+  }
 }
 
 .album__list {
@@ -13,13 +34,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3.2%;
+    column-gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2%;
+    column-gap: 20px;
   }
 }
 
@@ -28,6 +49,10 @@
   flex-direction: column;
   margin-bottom: 20px;
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+  }
+
   &--featured {
     position: relative;
 
@@ -35,9 +60,10 @@
       content: "Панорама\a0дня";
       position: absolute;
       top: 0;
-      right: 20px;
+      right: 6.4%;
       min-width: 140px;
-      min-height: 5%;
+      min-height: 30px;
+      padding-top: 6px;
       font-weight: bold;
       font-size: 12px;
       line-height: 24px;
@@ -47,37 +73,125 @@
       background-color: $palette-accent;
       z-index: 2;
     }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 50px;
+
+      &::before {
+        top: 57px;
+        right: 3.1%;
+        min-height: 30px;
+        padding-top: 6px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        top: 54px;
+        right: 1%;
+      }
+    }
   }
 }
 
 .album__photo {
   display: block;
   width: 100%;
+  min-height: 180px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 400px;
+  }
+}
+
+.album__item--featured .album__photo {
+  min-height: 137px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 509px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 506px;
+  }
 }
 
 .album__description {
-  padding: 0;
-  margin: 0;
+  margin: 0 0 7px 0;
+  padding: 0 0 0 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+    padding-left: 4px;
+  }
 }
 
 .album__caption {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 25px 17px;
+  padding: 18.5px 10px 16px 10px;
   background-color: $palette-backs;
 
   @media (min-width: $tablet-width) {
-    padding: 30px;
+    min-height: 109px;
+    padding: 23px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 31px 27px;
+    padding: 23px;
   }
 }
 
 .album__item--featured .album__caption {
   @include wrapper;
+  padding: 18px 10px 16px 10px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    min-height: unset;
+    padding: 23px 23px 15px 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 894px;
+    padding-bottom: 14px;
+  }
+}
+
+.album__item--featured .album__description {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.album__item--featured .album__likes {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 2;
+  margin-top: 0;
+  margin-bottom: auto;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.album__source {
+  margin: 0;
+}
+
+.album__item--featured .album__source {
+  @media (min-width: $tablet-width) {
+    padding-right: 150px;
+  }
 }
 
 .album__author {
@@ -86,10 +200,12 @@
 
 .album__time {
   @include font-primary(12px, 24px, 300);
+  text-transform: uppercase;
 }
 
 .album__comment {
   @include font-primary(14px, 24px);
+  margin: 0;
 }
 
 .album__likes {

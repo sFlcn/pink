@@ -110,6 +110,18 @@
   @include font-accent(24px, 33px, 300);
   padding: 0;
   text-decoration: none;
+  transition: color 0.42s ease, opacity 0.42s ease;
+
+  &:hover,
+  &:focus {
+    color: $palette-prime;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
 }
 
 .contacts__info--address {

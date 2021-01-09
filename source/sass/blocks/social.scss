@@ -22,6 +22,7 @@
   padding: 0;
   border: 3px solid rgba($palette-prime, 0.1);
   border-radius: 50%;
+  transition: border-color 0.42s ease, opacity 0.21s ease;
 
   &:hover,
   &:focus {
@@ -29,7 +30,7 @@
   }
 
   &:active {
-    border: 3px solid rgba($palette-prime, 0.3);
+    border-color: rgba($palette-prime, 0.3);
     opacity: 0.3;
   }
 }

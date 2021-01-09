@@ -98,19 +98,29 @@
 
 .reviews__arrows {
   display: none;
+  opacity: 0.3;
 
   @media (min-width: $desktop-width) {
     display: block;
+
+    &--prev {
+      grid-row-start: 1;
+      grid-column-start: 1;
+    }
+
+    &--next {
+      grid-row-start: 1;
+      grid-column-start: -2;
+    }
   }
 
-  &--prev {
-    grid-row-start: 1;
-    grid-column-start: 1;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
   }
 
-  &--next {
-    grid-row-start: 1;
-    grid-column-start: -2;
+  &:active {
+    opacity: 0.1;
   }
 }
 

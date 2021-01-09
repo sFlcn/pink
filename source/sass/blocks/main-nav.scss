@@ -262,7 +262,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $palette-brightcontrast;
-  transition: 0.42s ease;
+  transition: color 0.42s ease, opacity 0.21s ease;
 
   &:hover,
   &:focus {
@@ -270,8 +270,11 @@
   }
 
   &:active {
-    color: $palette-brightcontrast;
     opacity: 0.3;
+
+    @media (min-width: $desktop-width) {
+      color: $palette-brightcontrast;
+    }
   }
 
   @media (min-width: $desktop-width) {

@@ -29,12 +29,12 @@
   padding: 15px 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 7px;
+    margin-bottom: 14px;
   }
 
   @media (min-width: $desktop-width) {
     width: 147px;
-    margin-bottom: 9px;
+    margin-bottom: 15px;
   }
 }
 
@@ -69,8 +69,8 @@
 }
 
 .page-footer__social {
-  margin-bottom: 8px;
-  padding: 12px;
+  margin-bottom: 1px;
+  padding: 19px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -102,6 +102,7 @@
   margin-left: 15px;
   padding: 14px 0;
   color: $palette-accent;
+  transition: color 0.42s ease, opacity 0.21s ease;
 
   @media (min-width: $tablet-width) {
     margin-top: 1px;

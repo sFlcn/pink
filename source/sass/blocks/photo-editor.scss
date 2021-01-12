@@ -97,7 +97,7 @@
 .photo-editor__tools-selectors {
   display: flex;
   justify-content: center;
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -105,9 +105,29 @@
 }
 
 .photo-editor__tool {
-  width: 50px;
-  height: 50px;
+  width: 51px;
+  height: 47px;
   background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.photo-editor__tool svg {
+  color: $palette-prime;
+  opacity: 0.3;
+  transition: color, opacity 0.42s ease;
+}
+
+.photo-editor__tool:hover svg,
+.photo-editor__tool:focus svg {
+  opacity: 0.5;
+}
+
+.photo-editor__tool--current svg {
+  color: $palette-accent;
+  opacity: 1;
 }
 
 .photo-editor__range {

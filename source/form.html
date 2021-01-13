@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Личный проект студента HTML Academy на курсе 'HTML и CSS. Адаптивная вёрстка и автоматизация' #21">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="../img/back--mobile@2x.jpg" media="(max-width: 320px) and (min-resolution: 1.1dppx)" as="image">
+    <link rel="preload" href="../img/back--mobile.jpg" media="(max-width: 320px) and (max-resolution: 1dppx)" as="image">
+    <link rel="preload" href="../img/back--tablet@2x.jpg" media="(min-width: 321px) and (max-width: 959px) and (min-resolution: 1.1dppx)" as="image">
+    <link rel="preload" href="../img/back--tablet.jpg" media="(min-width: 321px) and (max-width: 959px) and (max-resolution: 1dppx)" as="image">
+    <link rel="preload" href="../fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../js/script.min.js" as="script">
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
@@ -51,7 +58,7 @@
               <a>Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -210,27 +217,27 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter button" href="https://twitter.com/htmlacademy_ru" target="_blank">
-                <img src="../img/logo--twitter.svg" width="18" height="14" aria-hidden="true">
+              <a class="social__link social__link--twitter button" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener">
+                <img src="../img/logo--twitter.svg" width="18" height="14" aria-hidden="true" loading="lazy">
                 <span class="visually-hidden">Наш twitter</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook button" href="https://www.facebook.com/htmlacademy" target="_blank">
-                <img src="../img/logo--facebook.svg" width="9" height="18" aria-hidden="true">
+              <a class="social__link social__link--facebook button" href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener">
+                <img src="../img/logo--facebook.svg" width="9" height="18" aria-hidden="true" loading="lazy">
                 <span class="visually-hidden">Наш facebook</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-                <img src="../img/logo--youtube.svg" width="19" height="14" aria-hidden="true">
+              <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noopener">
+                <img src="../img/logo--youtube.svg" width="19" height="14" aria-hidden="true" loading="lazy">
                 <span class="visually-hidden">Наш youtube</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">
             <span>Разработано</span>
             <svg class="page-footer__copyright-icon" width="27" height="34" aria-hidden="true" focusable="false">
               <use xlink:href="../img/pink_sprite.svg#logo--html-academy"></use>
@@ -261,6 +268,6 @@
       </div>
     </section>
 
-    <script src="./js/script.min.js"></script>
+    <script src="../js/script.min.js"></script>
   </body>
 </html>

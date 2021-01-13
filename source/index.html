@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Личный проект студента HTML Academy на курсе 'HTML и CSS. Адаптивная вёрстка и автоматизация' #21">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="../img/back--mobile@2x.jpg" media="(max-width: 320px) and (min-resolution: 1.1dppx)" as="image">
+    <link rel="preload" href="../img/back--mobile.jpg" media="(max-width: 320px) and (max-resolution: 1dppx)" as="image">
+    <link rel="preload" href="../img/back--tablet@2x.jpg" media="(min-width: 321px) and (max-width: 959px) and (min-resolution: 1.1dppx)" as="image">
+    <link rel="preload" href="../img/back--tablet.jpg" media="(min-width: 321px) and (max-width: 959px) and (max-resolution: 1dppx)" as="image">
+    <link rel="preload" href="../fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../js/script.min.js" as="script">
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
@@ -51,7 +58,7 @@
               <a href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML&nbsp;Academy</a>
+              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">HTML&nbsp;Academy</a>
             </li>
           </ul>
         </div>
@@ -71,16 +78,16 @@
       </div>
       <div class="page-header__container">
         <div class="page-header__download download">
-          <a class="download__link button" href="https://www.apple.com/app-store/" target="_blank">Скачать приложение</a>
+          <a class="download__link button" href="https://www.apple.com/app-store/" target="_blank" rel="noreferrer nofollow ">Скачать приложение</a>
           <ul class="download__platforms">
             <li class="download__platform">
-              <a class="download__alt-link download__alt-link--appstore" href="https://www.apple.com/app-store/" target="_blank"><span class="visually-hidden">App Store</span></a>
+              <a class="download__alt-link download__alt-link--appstore" href="https://www.apple.com/app-store/" target="_blank" rel="noreferrer nofollow "><span class="visually-hidden">App Store</span></a>
             </li>
             <li class="download__platform">
-              <a class="download__alt-link download__alt-link--googleplay" href="https://play.google.com/store/" target="_blank"><span class="visually-hidden">Google Play</span></a>
+              <a class="download__alt-link download__alt-link--googleplay" href="https://play.google.com/store/" target="_blank" rel="noreferrer nofollow "><span class="visually-hidden">Google Play</span></a>
             </li>
             <li class="download__platform">
-              <a class="download__alt-link download__alt-link--microsoftstore" href="https://www.microsoft.com/store/" target="_blank"><span class="visually-hidden">Microsoft Store</span></a>
+              <a class="download__alt-link download__alt-link--microsoftstore" href="https://www.microsoft.com/store/" target="_blank" rel="noreferrer nofollow "><span class="visually-hidden">Microsoft Store</span></a>
             </li>
           </ul>
           <p class="download__description">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
@@ -106,7 +113,7 @@
                   <div class="features__image-container">
                     <picture>
                       <source type="image/webp" srcset="../img/pink-app__gray.webp 1x, ../img/pink-app__gray@2x.webp 2x">
-                      <img src="../img/pink-app__gray.png" srcset="../img/pink-app__gray@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink">
+                      <img src="../img/pink-app__gray.png" srcset="../img/pink-app__gray@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink" loading="lazy">
                     </picture>
                   </div>
                 </div>
@@ -118,7 +125,7 @@
                   <div class="features__image-container">
                     <picture>
                       <source type="image/webp" srcset="../img/pink-app__fill.webp 1x, ../img/pink-app__fill@2x.webp 2x">
-                      <img src="../img/pink-app__fill.png" srcset="../img/pink-app__fill@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink">
+                      <img src="../img/pink-app__fill.png" srcset="../img/pink-app__fill@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink" loading="lazy">
                     </picture>
                   </div>
                 </div>
@@ -130,7 +137,7 @@
                   <div class="features__image-container">
                     <picture>
                       <source type="image/webp" srcset="../img/pink-app__smile.webp 1x, ../img/pink-app__smile@2x.webp 2x">
-                      <img src="../img/pink-app__smile.png" srcset="../img/pink-app__smile@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink">
+                      <img src="../img/pink-app__smile.png" srcset="../img/pink-app__smile@2x.png 2x" width="186" height="382" alt="Скриншот приложения Pink" loading="lazy">
                     </picture>
                   </div>
                 </div>
@@ -141,7 +148,7 @@
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/pink-app__smile--big.webp 1x, ../img/pink-app__smile--big@2x.webp 2x">
                 <source type="image/webp" srcset="../img/pink-app__smile--small.webp 1x, ../img/pink-app__smile--small@2x.webp 2x">
                 <source media="(min-width: 660px)" srcset="../img/pink-app__smile--big.png 1x, ../img/pink-app__smile--big@2x.png 2x">
-                <img src="../img/pink-app__smile--small.png" srcset="../img/pink-app__smile--small@2x.png 2x" width="157" height="320" alt="Скриншот приложения Pink">
+                <img src="../img/pink-app__smile--small.png" srcset="../img/pink-app__smile--small@2x.png 2x" width="157" height="320" alt="Скриншот приложения Pink" loading="lazy">
               </picture>
             </div>
           </div>
@@ -157,7 +164,7 @@
           </div>
           <picture>
             <source media="(min-width: 960px)" srcset="../img/round-diagram--big.svg">
-            <img class="invitation__image" src="../img/round-diagram--medium.svg" width="238" height="276" alt="Иллюстрация к статье">
+            <img class="invitation__image" src="../img/round-diagram--medium.svg" width="238" height="276" alt="Иллюстрация к статье" loading="lazy">
           </picture>
         </div>
       </section>
@@ -269,7 +276,7 @@
             </li>
             <li class="contacts__info contacts__info--address">
               <b class="contacts__caption">Приезжайте в&nbsp;гости:</b>
-              <a class="contacts__link" href="https://yandex.ru/maps/-/CCUAJIxXcC" target="_blank">ул.&nbsp;Большая Конюшенная,&nbsp;19/8</a>
+              <a class="contacts__link" href="https://yandex.ru/maps/-/CCUAJIxXcC" target="_blank" rel="noopener">ул.&nbsp;Большая Конюшенная,&nbsp;19/8</a>
             </li>
           </ul>
         </div>
@@ -278,7 +285,7 @@
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
         <div class="map__container">
-          <a class="map__link" href="https://yandex.ru/maps/-/CCUAJIxXcC" target="_blank">
+          <a class="map__link" href="https://yandex.ru/maps/-/CCUAJIxXcC" target="_blank" rel="noopener">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="../img/map--big.webp">
               <source type="image/webp" media="(min-width: 405px)" srcset="../img/map--medium.webp">
@@ -288,7 +295,7 @@
               <img class="map__image" src="../img/map--small.png" width="320" height="200" alt="город Санкт-Петербург, улица Большая Конюшенная, дом 19/8.">
             </picture>
           </a>
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.154871489987!2d30.32125483658079!3d59.93915371385959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1608309755950!5m2!1sru!2sru"></iframe>
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.154871489987!2d30.32125483658079!3d59.93915371385959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1608309755950!5m2!1sru!2sru" title="Google-карта для нашего адреса"></iframe>
         </div>
       </section>
     </main>
@@ -306,27 +313,27 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter button" href="https://twitter.com/htmlacademy_ru" target="_blank">
-                <img src="../img/logo--twitter.svg" width="18" height="14" aria-hidden="true">
+              <a class="social__link social__link--twitter button" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener">
+                <img src="../img/logo--twitter.svg" width="18" height="14" aria-hidden="true" loading="lazy">
                 <span class="visually-hidden">Наш twitter</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook button" href="https://www.facebook.com/htmlacademy" target="_blank">
-                <img src="../img/logo--facebook.svg" width="9" height="18" aria-hidden="true">
+              <a class="social__link social__link--facebook button" href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener">
+                <img src="../img/logo--facebook.svg" width="9" height="18" aria-hidden="true" loading="lazy">
                 <span class="visually-hidden">Наш facebook</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-                <img src="../img/logo--youtube.svg" width="19" height="14" aria-hidden="true">
+              <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noopener">
+                <img src="../img/logo--youtube.svg" width="19" height="14" aria-hidden="true" loading="lazy">
                 <span class="visually-hidden">Наш youtube</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">
             <span>Разработано</span>
             <svg class="page-footer__copyright-icon" width="27" height="34" aria-hidden="true" focusable="false">
               <use xlink:href="../img/pink_sprite.svg#logo--html-academy"></use>
@@ -337,6 +344,6 @@
       </div>
     </footer>
 
-    <script src="./js/script.min.js"></script>
+    <script src="../js/script.min.js"></script>
   </body>
 </html>

@@ -13,7 +13,7 @@
   background-color: unset;
 
   &--no-js {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
     padding-bottom: 0;
     background-color: $palette-prime;
 
@@ -202,7 +202,7 @@
 
 .main-nav--no-js .main-nav__list {
   position: static;
-  margin-top: 6px;
+  margin-top: 15px;
 
   @media (min-width: $tablet-width) {
     margin-top: 33px;
@@ -253,6 +253,10 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

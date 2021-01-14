@@ -43,6 +43,7 @@
 
 .main-nav__logo {
   display: block;
+  max-width: 200px;
   margin: 0 0 0 20px;
   padding: 10px 0;
   transition: color, opacity 0.72s ease;
@@ -283,6 +284,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
     border-bottom: 2px solid transparent;
     text-transform: none;
     font-weight: normal;

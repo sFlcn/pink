@@ -126,6 +126,7 @@
   padding-right: 20px;
   text-transform: uppercase;
   text-align: center;
+  word-break: break-word;
   background-color: inherit;
 
   @media (min-width: $tablet-width) {
@@ -528,13 +529,30 @@
 
 .form__submit {
   @include font-menu(18px, 30px);
-  @include colored-button($palette-highlite, 3px, $palette-brightcontrast);
   margin-bottom: 34px;
   padding: 16.5px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $palette-brightcontrast;
+  background-color: $palette-highlite;
 
   @media (min-width: $tablet-width) {
     min-width: 267px;
     margin: 0 auto 0 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba($palette-brightcontrast, 0.3);
+  }
+
+  &:disabled {
+    background-color: $palette-outlines;
   }
 }
 

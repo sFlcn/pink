@@ -122,8 +122,25 @@
 
 .popup__submit {
   @include font-menu(18px, 30px);
-  @include colored-button($palette-highlite, 3px, $palette-brightcontrast);
   box-sizing: border-box;
   width: 100%;
   padding: 16.5px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $palette-brightcontrast;
+  background-color: $palette-highlite;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba($palette-brightcontrast, 0.3);
+  }
+
+  &:disabled {
+    background-color: $palette-outlines;
+  }
 }

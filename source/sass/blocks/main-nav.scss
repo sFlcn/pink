@@ -164,6 +164,7 @@
   @include list();
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   background-color: $palette-prime;
   box-shadow: 0 -1px 0 #000000;
@@ -261,8 +262,8 @@
 }
 
 .main-nav__item a {
-  padding-top: 10px;
-  padding-bottom: 4px;
+  padding: 10px 10px 4px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: $palette-brightcontrast;

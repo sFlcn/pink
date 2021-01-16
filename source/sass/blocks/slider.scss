@@ -1,13 +1,12 @@
 .slider__toggles {
   display: flex;
   flex-wrap: wrap;
-  gap: 13px;
 }
 
 .slider__toggle {
   width: 6px;
   height: 6px;
-  margin: 0;
+  margin: 0 6.5px;
   padding: 0;
   background-color: $palette-prime;
   border: 3px solid #ffffff;

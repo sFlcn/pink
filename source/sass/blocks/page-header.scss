@@ -34,7 +34,7 @@
 .page-header__headline {
   position: relative;
   min-height: 143px;
-  padding-top: 13px;
+  padding-top: 28px;
 
   @media (min-width: $tablet-width) {
     min-height: 263px;
@@ -68,7 +68,7 @@
 // promo-styles
 .page-header--promo .page-header__headline {
   display: grid;
-  padding-top: 10px;
+  padding-top: 23px;
 
   @media (min-width: $tablet-width) {
     padding-top: 50px;
@@ -100,10 +100,11 @@
 }
 
 .page-header--promo .page-header__title {
-  line-height: 120%;
+  line-height: 29px;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
+    line-height: 48px;
   }
 
   @media (min-width: $desktop-width) {

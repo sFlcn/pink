@@ -1,6 +1,6 @@
 .features {
   @include font-primary;
-  padding: 42px 0 0 0;
+  padding: 40px 0 0 0;
 
   @media (min-width: $tablet-width) {
     padding-top: 47px;
@@ -16,7 +16,7 @@
 }
 
 .features__intro {
-  @include font-primary(24px, 120%, 300);
+  @include font-primary(24px, 29px, 300);
   text-align: center;
   background-color: $palette-brightcontrast;
 
@@ -35,7 +35,7 @@
 
 .features__intro p {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;

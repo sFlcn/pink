@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Личный проект студента HTML Academy на курсе 'HTML и CSS. Адаптивная вёрстка и автоматизация' #21">
+    <meta name="description" content="Личный проект студента HTML Academy на курсе «HTML и CSS. Адаптивная вёрстка и автоматизация» #21">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preload" href="../img/back--mobile@2x.jpg" media="(max-width: 320px) and (min-resolution: 1.1dppx)" as="image">
@@ -28,13 +28,13 @@
       <nav class="page-header__nav">
         <div class="main-nav main-nav--no-js">
           <a class="main-nav__logo" href="index.html">
-            <svg class="main-nav__logo-icon main-nav__logo-icon--mobile" width="74" height="23" role="img" alt="Логотип Pink." focusable="false">
+            <svg class="main-nav__logo-icon main-nav__logo-icon--mobile" width="74" height="23" role="img" aria-label="Pink." focusable="false">
               <use xlink:href="../img/pink_sprite.svg#header-logo--small"></use>
             </svg>
-            <svg class="main-nav__logo-icon main-nav__logo-icon--tablet" width="145" height="40" role="img" alt="Логотип Pink." focusable="false">
+            <svg class="main-nav__logo-icon main-nav__logo-icon--tablet" width="145" height="40" role="img" aria-label="Pink." focusable="false">
               <use xlink:href="../img/pink_sprite.svg#header-logo--medium"></use>
             </svg>
-            <svg class="main-nav__logo-icon main-nav__logo-icon--desktop" width="147" height="40" role="img" alt="Логотип Pink." focusable="false">
+            <svg class="main-nav__logo-icon main-nav__logo-icon--desktop" width="147" height="40" role="img" aria-label="Pink." focusable="false">
               <use xlink:href="../img/pink_sprite.svg#header-logo--large"></use>
             </svg>
           </a>
@@ -267,7 +267,7 @@
               <source type="image/webp" srcset="../img/photo-7--mobile.webp 1x, ../img/photo-7--mobile@2x.webp 2x">
               <source media="(min-width: 960px)" srcset="../img/photo-7--desktop.jpg 1x, ../img/photo-7--desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="../img/photo-7--tablet.jpg 1x, ../img/photo-7--tablet@2x.jpg 2x">
-              <img class="album__photo" src="../img/photo-7--mobile.jpg" srcset="../img/photo-7--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+              <img class="photo-editor__image" src="../img/photo-7--mobile.jpg" srcset="../img/photo-7--mobile@2x.jpg 2x" width="280" height="374" alt="фото конкурса." loading="lazy">
             </picture>
           </div>
           <fieldset class="photo-editor__controls">
@@ -293,13 +293,13 @@
               </button>
             </div>
             <div class="photo-editor__range photo-editor__range--crop photo-editor__range--current">
-              <input class="range-input" type="range" name="photo-editor__crop" min="0" max="100" value="85.5" step="0.5">
+              <input class="range-input" type="range" name="photo-editor__crop" min="0" max="100" value="85.5" step="0.5" aria-label="Уровень кадрирования">
             </div>
             <div class="photo-editor__range photo-editor__range--fill">
-              <input class="range-input" type="range" name="photo-editor__fill" min="0" max="100" value="13.5" step="0.5">
+              <input class="range-input" type="range" name="photo-editor__fill" min="0" max="100" value="13.5" step="0.5" aria-label="Уровень заскрашивания">
             </div>
             <div class="photo-editor__range photo-editor__range--contrast">
-              <input class="range-input" type="range" name="photo-editor__contrast" min="0" max="100" value="51" step="0.5">
+              <input class="range-input" type="range" name="photo-editor__contrast" min="0" max="100" value="51" step="0.5" aria-label="Уровень контраста">
             </div>
           </fieldset>
           <fieldset class="photo-editor__buttons">
@@ -316,10 +316,10 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
-          <svg class="page-footer__logo-icon page-footer__logo-icon--tablet" width="145" height="40" role="img" alt="Логотип Pink." focusable="false">
+          <svg class="page-footer__logo-icon page-footer__logo-icon--tablet" width="145" height="40" role="img" aria-label="Pink." focusable="false">
             <use xlink:href="../img/pink_sprite.svg#footer-logo--medium"></use>
           </svg>
-          <svg class="page-footer__logo-icon page-footer__logo-icon--desktop" width="147" height="40" role="img" alt="Логотип Pink." focusable="false">
+          <svg class="page-footer__logo-icon page-footer__logo-icon--desktop" width="147" height="40" role="img" aria-label="Pink." focusable="false">
             <use xlink:href="../img/pink_sprite.svg#footer-logo--large"></use>
           </svg>
         </a>
@@ -327,19 +327,25 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter button" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener">
-                <img src="../img/logo--twitter.svg" width="18" height="14" aria-hidden="true" loading="lazy">
+                <svg class="social__link-icon" width="18" height="14" aria-hidden="true" focusable="false">
+                  <use xlink:href="../img/pink_sprite.svg#logo--twitter"></use>
+                </svg>
                 <span class="visually-hidden">Наш twitter</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook button" href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener">
-                <img src="../img/logo--facebook.svg" width="9" height="18" aria-hidden="true" loading="lazy">
+                <svg class="social__link-icon" width="9" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="../img/pink_sprite.svg#logo--facebook"></use>
+                </svg>
                 <span class="visually-hidden">Наш facebook</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noopener">
-                <img src="../img/logo--youtube.svg" width="19" height="14" aria-hidden="true" loading="lazy">
+                <svg class="social__link-icon" width="19" height="14" aria-hidden="true" focusable="false">
+                  <use xlink:href="../img/pink_sprite.svg#logo--youtube"></use>
+                </svg>
                 <span class="visually-hidden">Наш youtube</span>
               </a>
             </li>

@@ -71,7 +71,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18.3px;
   margin-left: 4%;
   margin-right: 4%;
 
@@ -95,7 +95,7 @@
 }
 
 .contacts__caption {
-  @include font-titles(18px, normal);
+  @include font-titles(18px, 25px, bold);
 
   @media (min-width: $tablet-width) {
     margin-bottom: 4px;

@@ -59,7 +59,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 25px 0;
+  padding: 25px 0 0;
   overflow: hidden;
 
   @media (max-width: $tablet-width - 1) {
@@ -69,6 +69,7 @@
 
 .price__table {
   min-width: 836px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     width: 100%;

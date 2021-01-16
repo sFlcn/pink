@@ -51,7 +51,6 @@
 .photo-editor__image-box {
   grid-row-start: 1;
   grid-row-end: 3;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 280px;
@@ -131,8 +130,8 @@
 }
 
 .photo-editor__range {
-  margin: 0 20px;
-  margin-bottom: 17px;
+  margin: 0 20px 17px;
+  height: 27.5px;
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {

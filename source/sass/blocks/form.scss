@@ -272,6 +272,11 @@
   border-color: $palette-accent;
 }
 
+.form__check-input:disabled ~ .form__label-check,
+.form__radio-input:disabled ~ .form__label-radio {
+  opacity: 0.3;
+}
+
 .form__container--name .form__label {
   @media (min-width: $tablet-width) {
     flex-wrap: nowrap;
@@ -443,6 +448,7 @@
 
   &::placeholder {
     @include font-primary(18px, 30px, 400, $palette-prime);
+    opacity: 1;
   }
 }
 
@@ -529,7 +535,7 @@
 
 .form__submit {
   @include font-menu(18px, 30px);
-  margin-bottom: 34px;
+  margin: 0 0 34px;
   padding: 16.5px;
   border-radius: 3px;
   text-align: center;

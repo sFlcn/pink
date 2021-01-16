@@ -26,8 +26,10 @@
 }
 
 .page-footer__logo {
+  width: 145px;
+  height: 40px;
   padding: 15px 0;
-  margin: 0 auto;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 14px;

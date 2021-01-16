@@ -69,3 +69,78 @@ if (contestForm && contestFormSuccesPopup && contestFormFailurePopup) {
     }
   });
 }
+
+
+// фотоальбом
+var album = document.querySelector('.album');
+
+if (album) {
+  var picturePopup = document.querySelector('.popup--photo');
+  var popupFullPicture = picturePopup.querySelector('.popup__full-picture');
+  var popupDownloadLink = picturePopup.querySelector('.popup__download--file');
+  var popupCancel = picturePopup.querySelector('.popup__download--cancel');
+  var thumbnails = album.querySelectorAll('.album__photo-link');
+  var hearts = album.querySelectorAll('.likes__button');
+  var likesNumber = album.querySelectorAll('.likes__count');
+
+  var addThumbnailClickHandler = function (thumbnail, photo) {
+    thumbnail.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      popupFullPicture.src = photo;
+      popupDownloadLink.href = photo;
+      picturePopup.classList.add('popup--show');
+    });
+  };
+
+  for (var i = 0; i < thumbnails.length; i++) {
+    var photoUrl = thumbnails[i].href;
+    addThumbnailClickHandler(thumbnails[i], photoUrl);
+    popupCancel.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      picturePopup.classList.remove('popup--show');
+    });
+  }
+
+  var addLikesClickHandler = function (likeButton, counter) {
+    likeButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      if (likeButton.classList.contains('likes__button--liked')) {
+        counter.textContent--;
+      } else {
+        counter.textContent++;
+      }
+      likeButton.classList.toggle('likes__button--liked');
+      document.activeElement.blur();
+    });
+  };
+
+  for (var i = 0; i < hearts.length; i++) {
+    addLikesClickHandler(hearts[i], likesNumber[i]);
+  }
+}
+
+
+// фоторедактор
+var photoEditor = document.querySelector('.photo-editor');
+
+if (photoEditor) {
+  var photoEditorTools = photoEditor.querySelectorAll('.photo-editor__tool');
+  var photoEditorRanges = photoEditor.querySelectorAll('.photo-editor__range');
+
+  var addPhotoEditorToolsClickHandler = function (button, range) {
+    button.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      for (var i = 0; i < photoEditorTools.length; i++) {
+        photoEditorTools[i].classList.remove('photo-editor__tool--current');
+        photoEditorRanges[i].classList.remove('photo-editor__range--current');
+      }
+      button.classList.add('photo-editor__tool--current');
+      range.classList.add('photo-editor__range--current');
+      document.activeElement.blur();
+    });
+  };
+
+  for (var i = 0; i < photoEditorTools.length; i++) {
+    addPhotoEditorToolsClickHandler(photoEditorTools[i], photoEditorRanges[i]);
+  }
+}

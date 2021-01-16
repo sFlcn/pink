@@ -56,7 +56,11 @@ exports.styles = styles;
 // Images
 
 const opimizeImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src([
+    "source/img/**/*.{jpg,png,svg}",
+    "!source/img/sprite/**/*",
+    "!source/img/hi-res/**/*"
+  ])
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -75,7 +79,10 @@ exports.opimizeImages = opimizeImages;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src([
+    "source/img/**/*.{jpg,png}",
+    "!source/img/hi-res/**/*"
+  ])
     .pipe(webp({quality: 85}))
     .pipe(gulp.dest("build/img"));
 }
@@ -99,7 +106,8 @@ const copyResources = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/icons/*",
-    "source/img/**/*.{jpg,png,svg}"
+    "source/img/**/*.{jpg,png,svg}",
+    "!source/img/sprite/**/*"
   ], {
     base: "source"
   })

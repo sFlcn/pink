@@ -1,7 +1,7 @@
 .popup {
   display: none;
   position: fixed;
-  top: 20.6%;
+  top: 7%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -85,6 +85,9 @@
 }
 
 .popup__buttons-area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 50px 20px;
   background-color: $palette-backs;
 
@@ -143,4 +146,44 @@
   &:disabled {
     background-color: $palette-outlines;
   }
+}
+
+.popup__download {
+  @include font-menu(16px, auto);
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 5px;
+  padding: 10px 5px;
+  border-radius: 3px;
+  background-color: $palette-highlite;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba($palette-brightcontrast, 0.3);
+  }
+
+  &--cancel {
+    color: $palette-prime;
+    background-color: $palette-outlines;
+
+    &:hover,
+    &:focus {
+      color: rgba($palette-prime, 0.5);
+      background-color: rgba($palette-outlines, 0.5);
+    }
+  }
+
+  &:disabled {
+    background-color: $palette-outlines;
+  }
+}
+
+.popup__full-picture {
+  max-width: 100%;
+  max-height: 300px;
 }

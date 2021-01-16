@@ -77,7 +77,7 @@
         </div>
         <article class="album__item album__item--featured">
           <h3 class="visually-hidden">Панорама дня от "Pink"</h3>
-          <a class="album__photo-link" href="#">
+          <a class="album__photo-link" href="../img/hi-res/photo-panorama.jpg">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-panorama--desktop.webp 1x, ../img/photo-panorama--desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-panorama--tablet.webp 1x, ../img/photo-panorama--tablet@2x.webp 2x">
@@ -103,7 +103,7 @@
         </article>
         <ul class="album__list">
           <li class="album__item">
-            <a class="album__photo-link" href="#">
+            <a class="album__photo-link" href="../img/hi-res/photo-1.jpg">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-1--desktop.webp 1x, ../img/photo-1--desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-1--tablet.webp 1x, ../img/photo-1--tablet@2x.webp 2x">
@@ -128,7 +128,7 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="#">
+            <a class="album__photo-link" href="../img/hi-res/photo-2.jpg">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-2--desktop.webp 1x, ../img/photo-2--desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-2--tablet.webp 1x, ../img/photo-2--tablet@2x.webp 2x">
@@ -153,7 +153,7 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="#">
+            <a class="album__photo-link" href="../img/hi-res/photo-3.jpg">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-3--desktop.webp 1x, ../img/photo-3--desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-3--tablet.webp 1x, ../img/photo-3--tablet@2x.webp 2x">
@@ -178,7 +178,7 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="#">
+            <a class="album__photo-link" href="../img/hi-res/photo-4.jpg">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-4--desktop.webp 1x, ../img/photo-4--desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-4--tablet.webp 1x, ../img/photo-4--tablet@2x.webp 2x">
@@ -203,7 +203,7 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="#">
+            <a class="album__photo-link" href="../img/hi-res/photo-5.jpg">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-5--desktop.webp 1x, ../img/photo-5--desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-5--tablet.webp 1x, ../img/photo-5--tablet@2x.webp 2x">
@@ -228,7 +228,7 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="#">
+            <a class="album__photo-link" href="../img/hi-res/photo-6.jpg">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-6--desktop.webp 1x, ../img/photo-6--desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-6--tablet.webp 1x, ../img/photo-6--tablet@2x.webp 2x">
@@ -356,6 +356,17 @@
         </div>
       </div>
     </footer>
+
+    <section class="popup popup--photo">
+      <div class="popup__message-area">
+        <h2 class="visually-hidden">Полноразмерное фото</h2>
+        <img class="popup__full-picture" src="../img/hi-res/photo-panorama.jpg" alt="Файл в высоком разрешении." loading="lazy">
+      </div>
+      <div class="popup__buttons-area">
+        <a class="popup__download popup__download--file button" href="../img/hi-res/photo-panorama.jpg" download>Скачать файл</a>
+        <button class="popup__download popup__download--cancel button" type="button" name="popup__cancel">Закрыть окно</button>
+      </div>
+    </section>
 
     <script src="../js/script.min.js"></script>
   </body>

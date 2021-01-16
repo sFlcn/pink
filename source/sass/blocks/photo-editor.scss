@@ -117,7 +117,7 @@
 .photo-editor__tool svg {
   color: $palette-prime;
   opacity: 0.3;
-  transition: color, opacity 0.42s ease;
+  transition: color 0.42s ease, opacity 0.42s ease-out;
 }
 
 .photo-editor__tool:hover svg,

@@ -33,6 +33,16 @@
   background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
   background-position: center;
+  transition: transform 0.42s ease, background-image 0.84s ease-out;
+
+  &--liked {
+    background-image: url("../img/heart--full.svg");
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
 
   @media (min-width: $tablet-width) {
     order: 2;

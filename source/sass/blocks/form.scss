@@ -201,13 +201,14 @@
 }
 
 .form__label-check {
-  padding: 7px 0 8px 59px;
+  padding: 7px 0 0;
+  word-break: break-word;
 
   &::before {
     content: "";
     position: absolute;
     top: -7px;
-    left: 0;
+    left: -59px;
     z-index: 10;
     width: 35px;
     height: 35px;
@@ -370,10 +371,10 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto auto;
     column-gap: 54px;
-    padding-bottom: 5px;
+    row-gap: 52px;
+    padding-bottom: 57px;
   }
 }
 
@@ -461,8 +462,27 @@
 .form__container--checks .form__input {
   margin-bottom: 52px;
 
-  &:last-child {
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    padding-left: 59px;
+
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column: 1;
+    }
+
+    &:nth-child(3) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &:nth-child(5) {
+      grid-row: 1;
+    }
   }
 }
 

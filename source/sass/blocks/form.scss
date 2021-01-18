@@ -461,10 +461,14 @@
 
 .form__container--checks .form__input {
   margin-bottom: 52px;
+  padding-left: 59px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
-    padding-left: 59px;
 
     &:nth-child(1) {
       grid-column: 1;

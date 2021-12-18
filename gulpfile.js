@@ -1,13 +1,13 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
+const sourcemaps = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify");
+const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -26,8 +26,12 @@ const minifyHtml = () => {
 
 const minifyScripts = () => {
   return gulp.src("source/js/script.js")
-    .pipe(uglify())
+    .pipe(sourcemaps.init())
+    .pipe(terser({
+      toplevel: "true"
+    }))
     .pipe(rename("script.min.js"))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -39,7 +43,7 @@ exports.minifyScripts = minifyScripts;
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
-    .pipe(sourcemap.init())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(rename("style.css"))
     .pipe(gulp.dest("build/css"))
@@ -48,7 +52,7 @@ const styles = () => {
       csso()
     ]))
     .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }

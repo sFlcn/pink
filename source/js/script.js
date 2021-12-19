@@ -1,3 +1,5 @@
+'use strict';
+
 // Главное меню
 var navMain = document.querySelector(".main-nav");
   var menuToggle = document.querySelector(".main-nav__menu-button");
@@ -144,3 +146,202 @@ if (photoEditor) {
     addPhotoEditorToolsClickHandler(photoEditorTools[i], photoEditorRanges[i]);
   }
 }
+
+// слайдер
+const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0.7) => {
+  const target = document.querySelector(`.${targetCssClass}`);
+  if (!target) {
+    return
+  };
+  const sliderWrapper = target.querySelector('.slider__wrapper');
+  const sliderList = target.querySelector('.slider__list');
+  const slides = target.querySelectorAll('.slider__item');
+  const arrows = target.querySelectorAll('.slider__button');
+  const prev = arrows[0];
+  const next = arrows[1];
+  const markers = target.querySelectorAll('.slider__markers-item');
+  let slideIndex = 0;
+  let posInit = 0;
+  let posX1 = 0;
+  let posX2 = 0;
+  let posY1 = 0;
+  let posY2 = 0;
+  let positionShift = 0;
+  let isSwipe = false;
+  let isScroll = false;
+  let allowSwipe = true;
+  let transition = true;
+  let toNextTransform = 0;
+  let toPrevTransform = 0;
+  const transformValueRegExp = /([-0-9.]+(?=px))/;
+
+  let slideWidth;
+  let posThreshold;
+  let lastTrf;
+  const updateWidthData = () => {
+    slideWidth = slides[0].offsetWidth;
+    posThreshold = slideWidth * swipeThreshold;
+    lastTrf = (slides.length - 1) * slideWidth;
+  }
+
+  const changeCurrentMarker = (oldIndex, newIndex) => {
+    markers[oldIndex].classList.remove('slider__markers-item--current');
+    markers[newIndex].classList.add('slider__markers-item--current');
+  }
+  changeCurrentMarker(0, 0);
+
+  const getEvent = (evt) => {
+    if (evt.type.search('touch') !== -1) {
+      return evt.touches[0];
+    } else {
+      return evt;
+    }
+  };
+
+  const slide = () => {
+    updateWidthData();
+    if (transition) {
+      sliderList.style.transition = `transform ${transitionDuration}s ease-out`;
+    }
+    sliderList.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+
+    prev.classList.toggle('slider__button--disabled', slideIndex === 0);
+    next.classList.toggle('slider__button--disabled', slideIndex === (slides.length - 1));
+  };
+
+  const swipeStart = (evt) => {
+    let userEvt = getEvent(evt);
+    updateWidthData();
+
+    if (allowSwipe) {
+      transition = true;
+      toNextTransform = (slideIndex + 1) * -slideWidth;
+      toPrevTransform = (slideIndex - 1) * -slideWidth;
+
+      posInit = posX1 = userEvt.clientX;
+      posY1 = userEvt.clientY;
+
+      sliderList.style.transition = '';
+
+      document.addEventListener('touchmove', swipeAction);
+      document.addEventListener('touchend', swipeEnd);
+      document.addEventListener('mousemove', swipeAction);
+      document.addEventListener('mouseup', swipeEnd);
+
+      sliderWrapper.classList.remove('grab');
+      sliderWrapper.classList.add('grabbing');
+    }
+  };
+
+  const swipeAction = (evt) => {
+    let userEvt = getEvent(evt);
+    let transform = +(sliderList.style.transform.match(transformValueRegExp)[0]);
+
+    posX2 = posX1 - userEvt.clientX;
+    posX1 = userEvt.clientX;
+    posY2 = posY1 - userEvt.clientY;
+    posY1 = userEvt.clientY;
+
+    if (!isSwipe && !isScroll) {
+      let posY = Math.abs(posY2);
+      if (posY > 11 || posX2 === 0) {
+        isScroll = true;
+        allowSwipe = false;
+      } else {
+        isSwipe = true;
+      }
+    }
+
+    if (isSwipe) {
+      if ((slideIndex === 0 && posX1 > posInit)) {
+        setTransform(transform, 0);
+        return;
+      } else if (slideIndex === (slides.length - 1) && posX1 < posInit) {
+        setTransform(transform, lastTrf);
+        return;
+      } else {
+        allowSwipe = true;
+      }
+
+      if (posInit > posX1 && transform < toNextTransform || posInit < posX1 && transform > toPrevTransform) {
+        reachEdge();
+        return;
+      }
+
+      sliderList.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+    }
+  };
+
+  const swipeEnd = () => {
+    updateWidthData();
+    positionShift = Math.abs(posInit - posX1);
+    isScroll = false;
+    isSwipe = false;
+    document.removeEventListener('touchmove', swipeAction);
+    document.removeEventListener('mousemove', swipeAction);
+    document.removeEventListener('touchend', swipeEnd);
+    document.removeEventListener('mouseup', swipeEnd);
+    sliderWrapper.classList.add('grab');
+    sliderWrapper.classList.remove('grabbing');
+
+    if (allowSwipe) {
+      if (positionShift > posThreshold) {
+        if (posX1 > posInit) {
+          changeCurrentMarker(slideIndex, slideIndex - 1);
+          slideIndex--;
+        } else if (posX1 < posInit) {
+          changeCurrentMarker(slideIndex, slideIndex + 1);
+          slideIndex++;
+        }
+      }
+
+      if (posX1 !== posInit) {
+        allowSwipe = false;
+        slide();
+      } else {
+        allowSwipe = true;
+      }
+
+    } else {
+      allowSwipe = true;
+    }
+  };
+
+  const setTransform = (transform, compareTransform) => {
+    if (transform >= compareTransform) {
+      sliderList.style.transform = `translate3d(${compareTransform}px, 0px, 0px)`;
+    }
+    allowSwipe = false;
+  };
+
+  const reachEdge = () => {
+    transition = false;
+    swipeEnd();
+    allowSwipe = true;
+  };
+
+  const onArrowsClick = (evt) => {
+    const clickedButton = evt.target.closest('button');
+    if (clickedButton.classList.contains('slider__button-next')) {
+      changeCurrentMarker(slideIndex, slideIndex + 1);
+      slideIndex++;
+    } else if (clickedButton.classList.contains('slider__button-prev')) {
+      changeCurrentMarker(slideIndex, slideIndex - 1);
+      slideIndex--;
+    } else {
+      return;
+    }
+    slide();
+  }
+
+  sliderList.style.transform = 'translate3d(0px, 0px, 0px)';
+  sliderWrapper.classList.add('grab');
+
+  sliderList.addEventListener('transitionend', () => allowSwipe = true);
+  sliderWrapper.addEventListener('touchstart', swipeStart);
+  sliderWrapper.addEventListener('mousedown', swipeStart);
+  prev.addEventListener('click', onArrowsClick);
+  next.addEventListener('click', onArrowsClick);
+
+}
+initSlider('slider', 0.2, 0.3);

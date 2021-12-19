@@ -28,20 +28,14 @@
 
 .reviews__list {
   @include list();
+}
 
+.reviews__item {
   @media (min-width: $desktop-width) {
     background-image: url("../img/quotes.svg");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center top 7px;
-  }
-}
-
-.reviews__item {
-  display: none;
-
-  &--current {
-    display: block;
   }
 }
 

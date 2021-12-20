@@ -118,7 +118,6 @@ const copyResources = () => {
     base: "source"
   })
     .pipe(gulp.dest("build"))
-  done();
 }
 
 exports.copyResources = copyResources;
@@ -139,6 +138,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    browser: process.argv[2].slice(2),
   });
   done();
 }

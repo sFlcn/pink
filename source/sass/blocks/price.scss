@@ -67,6 +67,13 @@
   }
 }
 
+.price__slider-window {
+  @media (max-width: $tablet-width - 1) {
+    width: 279px;
+    padding: 0 30%;
+  }
+}
+
 .price__table {
   min-width: 836px;
   margin-bottom: 25px;
@@ -81,8 +88,4 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
-
-.price__slider .price__table {
-  transform: translateX(0);
 }

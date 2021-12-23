@@ -28,9 +28,22 @@
 
 .reviews__list {
   @include list();
+  display: flex;
 }
 
 .reviews__item {
+  width: 99%;
+  height: 100%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
   @media (min-width: $desktop-width) {
     background-image: url("../img/quotes.svg");
     background-size: auto;

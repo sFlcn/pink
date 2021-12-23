@@ -217,71 +217,81 @@
         <div class="price__wrapper">
           <h2 class="visually-hidden">Тарифы</h2>
           <div class="price__slider slider">
-            <table class="price__table price-table">
-              <caption class="visually-hidden">Функционал приложения PINK и цены</caption>
-              <thead>
-                <tr class="price-table__row">
-                  <th class="price-table__head">
-                    &nbsp;
-                  </th>
-                  <th scope="col" class="price-table__head">
-                    <p class="price-table__caption">База</p>
-                    <p class="price-table__sum">1,99 USD</p>
-                  </th>
-                  <th scope="col" class="price-table__head price-table__head--bestseller">
-                    <p class="price-table__caption">Стандарт</p>
-                    <p class="price-table__sum">3,99 USD</p>
-                  </th>
-                  <th scope="col" class="price-table__head">
-                    <p class="price-table__caption">Анлим</p>
-                    <p class="price-table__sum">9,99 USD</p>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="price-table__row">
-                  <th class="price-table__cell">Розовый фильтр</th>
-                  <td class="price-table__cell price-table__cell--available">
-                    <span class="price-table__annotation">Розовый фильтр <span>Есть</span></span>
-                  </td>
-                  <td class="price-table__cell price-table__cell--available">
-                    <span class="price-table__annotation">Розовый фильтр <span>Есть</span></span>
-                  </td>
-                  <td class="price-table__cell price-table__cell--available">
-                    <span class="price-table__annotation">Розовый фильтр <span>Есть</span></span>
-                  </td>
-                </tr>
-                <tr class="price-table__row">
-                  <th class="price-table__cell">Смайлики</th>
-                  <td class="price-table__cell price-table__cell--unavailable">
-                    <span class="price-table__annotation">Смайлики <span>Нет</span></span>
-                  </td>
-                  <td class="price-table__cell price-table__cell--available">
-                    <span class="price-table__annotation">Смайлики <span>Есть</span></span>
-                  </td>
-                  <td class="price-table__cell price-table__cell--available">
-                    <span class="price-table__annotation">Смайлики <span>Есть</span></span>
-                  </td>
-                </tr>
-                <tr class="price-table__row">
-                  <th class="price-table__cell">Комментарии</th>
-                  <td class="price-table__cell price-table__cell--unavailable">
-                    <span class="price-table__annotation">Комментарии <span>Нет</span></span>
-                  </td>
-                  <td class="price-table__cell price-table__cell--unavailable">
-                    <span class="price-table__annotation">Комментарии <span>Нет</span></span>
-                  </td>
-                  <td class="price-table__cell price-table__cell--available">
-                    <span class="price-table__annotation">Комментарии <span>Есть</span></span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="price__toggles slider__markers-list">
-              <button class="slider__marker" type="button"><span class="visually-hidden">слайд 1</span></button>
-              <button class="slider__marker slider__marker--current" type="button"><span class="visually-hidden">слайд 2</span></button>
-              <button class="slider__marker" type="button"><span class="visually-hidden">слайд 3</span></button>
-            </p>
+            <div class="price__slider-window slider__wrapper">
+              <table class="price__table price-table slider__list">
+                <caption class="visually-hidden">Функционал приложения PINK и цены</caption>
+                <thead>
+                  <tr class="price-table__row">
+                    <th class="price-table__head">
+                      &nbsp;
+                    </th>
+                    <th scope="col" class="price-table__head slider__item">
+                      <p class="price-table__caption">База</p>
+                      <p class="price-table__sum">1,99 USD</p>
+                    </th>
+                    <th scope="col" class="price-table__head price-table__head--bestseller slider__item">
+                      <p class="price-table__caption">Стандарт</p>
+                      <p class="price-table__sum">3,99 USD</p>
+                    </th>
+                    <th scope="col" class="price-table__head slider__item">
+                      <p class="price-table__caption">Анлим</p>
+                      <p class="price-table__sum">9,99 USD</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="price-table__row">
+                    <th class="price-table__cell">Розовый фильтр</th>
+                    <td class="price-table__cell price-table__cell--available">
+                      <span class="price-table__annotation">Розовый фильтр <span>Есть</span></span>
+                    </td>
+                    <td class="price-table__cell price-table__cell--available">
+                      <span class="price-table__annotation">Розовый фильтр <span>Есть</span></span>
+                    </td>
+                    <td class="price-table__cell price-table__cell--available">
+                      <span class="price-table__annotation">Розовый фильтр <span>Есть</span></span>
+                    </td>
+                  </tr>
+                  <tr class="price-table__row">
+                    <th class="price-table__cell">Смайлики</th>
+                    <td class="price-table__cell price-table__cell--unavailable">
+                      <span class="price-table__annotation">Смайлики <span>Нет</span></span>
+                    </td>
+                    <td class="price-table__cell price-table__cell--available">
+                      <span class="price-table__annotation">Смайлики <span>Есть</span></span>
+                    </td>
+                    <td class="price-table__cell price-table__cell--available">
+                      <span class="price-table__annotation">Смайлики <span>Есть</span></span>
+                    </td>
+                  </tr>
+                  <tr class="price-table__row">
+                    <th class="price-table__cell">Комментарии</th>
+                    <td class="price-table__cell price-table__cell--unavailable">
+                      <span class="price-table__annotation">Комментарии <span>Нет</span></span>
+                    </td>
+                    <td class="price-table__cell price-table__cell--unavailable">
+                      <span class="price-table__annotation">Комментарии <span>Нет</span></span>
+                    </td>
+                    <td class="price-table__cell price-table__cell--available">
+                      <span class="price-table__annotation">Комментарии <span>Есть</span></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="slider__button slider__button-prev slider__button--disabled" type="button" hiddden><span class="visually-hidden">Следующий</span></button>
+            <button class="slider__button slider__button-next" type="button" hiddden><span class="visually-hidden">Предыдущий</span></button>
+            <ul class="price__toggles slider__markers-list">
+              <li class="slider__markers-item slider__markers-item--current">
+                <button class="slider__marker" type="button"><span class="visually-hidden">слайд 1</span></button>
+              </li>
+              <li class="slider__markers-item">
+                <button class="slider__marker" type="button"><span class="visually-hidden">слайд 2</span></button>
+              </li>
+              <li class="slider__markers-item">
+                <button class="slider__marker" type="button"><span class="visually-hidden">слайд 3</span></button>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -51,6 +51,7 @@
 }
 
 .price-table__cell {
+  min-width: 235px;
   padding: 12px 21px 17px 21px;
   border: 2px solid $palette-outlines;
   background-color: $palette-brightcontrast;

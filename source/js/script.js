@@ -148,10 +148,15 @@ if (photoEditor) {
 }
 
 // слайдер
-const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0.7) => {
+const initSlider = ({
+    targetCssClass,
+    workScreenWidthMax = Infinity,
+    swipeThreshold = 0.3,
+    transitionDuration = 0.7
+  }) => {
   const target = document.querySelector(`.${targetCssClass}`);
   if (!target) {
-    return
+    return;
   };
   const sliderWrapper = target.querySelector('.slider__wrapper');
   const sliderList = target.querySelector('.slider__list');
@@ -184,11 +189,17 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
     lastTrf = (slides.length - 1) * slideWidth;
   }
 
-  const changeCurrentMarker = (oldIndex, newIndex) => {
-    markers[oldIndex].classList.remove('slider__markers-item--current');
+  const isNotWorkingScreenWidth = () => {
+    return document.documentElement.clientWidth > workScreenWidthMax;
+  }
+
+  const updateSliderMarkers = (newIndex = 0) => {
+    for (const markerItem of markers) {
+      markerItem.classList.remove('slider__markers-item--current');
+    }
     markers[newIndex].classList.add('slider__markers-item--current');
   }
-  changeCurrentMarker(0, 0);
+  updateSliderMarkers();
 
   const getEvent = (evt) => {
     if (evt.type.search('touch') !== -1) {
@@ -200,18 +211,24 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
 
   const slide = () => {
     updateWidthData();
+    updateSliderMarkers(slideIndex);
     if (transition) {
       sliderList.style.transition = `transform ${transitionDuration}s ease-out`;
     }
     sliderList.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
 
     prev.classList.toggle('slider__button--disabled', slideIndex === 0);
+    prev.toggleAttribute('disabled', slideIndex === 0);
     next.classList.toggle('slider__button--disabled', slideIndex === (slides.length - 1));
+    next.toggleAttribute('disabled', slideIndex === (slides.length - 1));
   };
 
   const swipeStart = (evt) => {
-    let userEvt = getEvent(evt);
     updateWidthData();
+    if (isNotWorkingScreenWidth()) {
+      return;
+    }
+    let userEvt = getEvent(evt);
 
     if (allowSwipe) {
       transition = true;
@@ -287,10 +304,8 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
     if (allowSwipe) {
       if (positionShift > posThreshold) {
         if (posX1 > posInit) {
-          changeCurrentMarker(slideIndex, slideIndex - 1);
           slideIndex--;
         } else if (posX1 < posInit) {
-          changeCurrentMarker(slideIndex, slideIndex + 1);
           slideIndex++;
         }
       }
@@ -323,10 +338,8 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   const onArrowsClick = (evt) => {
     const clickedButton = evt.target.closest('button');
     if (clickedButton.classList.contains('slider__button-next')) {
-      changeCurrentMarker(slideIndex, slideIndex + 1);
       slideIndex++;
     } else if (clickedButton.classList.contains('slider__button-prev')) {
-      changeCurrentMarker(slideIndex, slideIndex - 1);
       slideIndex--;
     } else {
       return;
@@ -343,5 +356,24 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   prev.addEventListener('click', onArrowsClick);
   next.addEventListener('click', onArrowsClick);
 
+  window.addEventListener('resize', () => {
+    if (isNotWorkingScreenWidth()) {
+      slideIndex = 0;
+      slide();
+    }
+  });
 }
-initSlider('slider', 0.2, 0.3);
+
+initSlider({
+  targetCssClass: 'reviews__wrapper',
+  swipeThreshold: 0.2,
+  transitionDuration: 0.5,
+});
+
+initSlider({
+  targetCssClass: 'price__slider',
+  workScreenWidthMax: 659,
+  swipeThreshold: 0.2,
+  transitionDuration: 0.1,
+});
+

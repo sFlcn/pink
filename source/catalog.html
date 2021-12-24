@@ -260,15 +260,18 @@
           <h2 class="photo-editor__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
         </div>
         <form class="photo-editor__interface" action="https://echo.htmlacademy.ru" method="post" target="_blank">
-          <div class="photo-editor__image-box">
-            <picture>
-              <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-7--desktop.webp 1x, ../img/photo-7--desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-7--tablet.webp 1x, ../img/photo-7--tablet@2x.webp 2x">
-              <source type="image/webp" srcset="../img/photo-7--mobile.webp 1x, ../img/photo-7--mobile@2x.webp 2x">
-              <source media="(min-width: 960px)" srcset="../img/photo-7--desktop.jpg 1x, ../img/photo-7--desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="../img/photo-7--tablet.jpg 1x, ../img/photo-7--tablet@2x.jpg 2x">
-              <img class="photo-editor__image" src="../img/photo-7--mobile.jpg" srcset="../img/photo-7--mobile@2x.jpg 2x" width="280" height="374" alt="фото конкурса." loading="lazy">
-            </picture>
+          <div class="photo-editor__image-area">
+            <div class="photo-editor__image-box">
+              <div class="photo-editor__image-overlay"></div>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-7--desktop.webp 1x, ../img/photo-7--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-7--tablet.webp 1x, ../img/photo-7--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/photo-7--mobile.webp 1x, ../img/photo-7--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="../img/photo-7--desktop.jpg 1x, ../img/photo-7--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="../img/photo-7--tablet.jpg 1x, ../img/photo-7--tablet@2x.jpg 2x">
+                <img class="photo-editor__image" src="../img/photo-7--mobile.jpg" srcset="../img/photo-7--mobile@2x.jpg 2x" width="280" height="374" alt="фото конкурса." loading="lazy">
+              </picture>
+            </div>
           </div>
           <fieldset class="photo-editor__controls">
             <legend class="visually-hidden">Редактирование фото</legend>
@@ -293,13 +296,13 @@
               </button>
             </div>
             <div class="photo-editor__range photo-editor__range--crop photo-editor__range--current">
-              <input class="range-input" type="range" name="photo-editor__crop" min="0" max="100" value="85.5" step="0.5" aria-label="Уровень кадрирования">
+              <input class="range-input" type="range" name="photo-editor__crop" min="0" max="100" value="0" step="0.5" aria-label="Уровень кадрирования">
             </div>
             <div class="photo-editor__range photo-editor__range--fill">
-              <input class="range-input" type="range" name="photo-editor__fill" min="0" max="100" value="13.5" step="0.5" aria-label="Уровень заскрашивания">
+              <input class="range-input" type="range" name="photo-editor__fill" min="0" max="100" value="0" step="0.5" aria-label="Уровень заскрашивания">
             </div>
             <div class="photo-editor__range photo-editor__range--contrast">
-              <input class="range-input" type="range" name="photo-editor__contrast" min="0" max="100" value="51" step="0.5" aria-label="Уровень контраста">
+              <input class="range-input" type="range" name="photo-editor__contrast" min="0" max="100" value="50" step="0.5" aria-label="Уровень контраста">
             </div>
           </fieldset>
           <fieldset class="photo-editor__buttons">

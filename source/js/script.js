@@ -147,6 +147,39 @@ if (photoEditor) {
   }
 }
 
+const photoEditorImage = document.querySelector('.photo-editor__image');
+const photoEditorOverlay = document.querySelector('.photo-editor__image-overlay');
+const cropControl = document.querySelector('.photo-editor__range--crop input');
+const fillControl = document.querySelector('.photo-editor__range--fill input');
+const contrastControl = document.querySelector('.photo-editor__range--contrast input');
+const photoEditorReset = document.querySelector('.photo-editor__button--reset');
+
+const cropInputHandler = () => {
+  photoEditorImage.style.transform = `scale(${1 + 0.04 * cropControl.value})`;
+}
+
+const fillInputHandler = () => {
+  photoEditorOverlay.style.opacity = (0.01 * fillControl.value);
+}
+
+const contrastInputHandler = () => {
+  photoEditorImage.style.filter = `contrast(${(0.015 * contrastControl.value) + 0.25})`;
+}
+
+const photoEditorResetHandler = () => {
+  cropControl.value = 0;
+  cropInputHandler();
+  fillControl.value = 0;
+  fillInputHandler();
+  contrastControl.value = 50;
+  contrastInputHandler();
+}
+
+cropControl.addEventListener('input', cropInputHandler);
+fillControl.addEventListener('input', fillInputHandler);
+contrastControl.addEventListener('input', contrastInputHandler);
+photoEditorReset.addEventListener('click', photoEditorResetHandler);
+
 // слайдер
 const initSlider = ({
     targetCssClass,
@@ -376,4 +409,3 @@ initSlider({
   swipeThreshold: 0.2,
   transitionDuration: 0.1,
 });
-

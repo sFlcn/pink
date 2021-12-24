@@ -131,6 +131,10 @@ const clean = () => {
 // Server
 
 const server = (done) => {
+  let myBrowser = "";
+  if (process.argv.length > 2) {
+    myBrowser = process.argv[2].slice(2);
+  }
   sync.init({
     server: {
       baseDir: "build"
@@ -138,7 +142,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
-    browser: process.argv[2].slice(2),
+    browser: myBrowser,
   });
   done();
 }

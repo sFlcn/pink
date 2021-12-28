@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Личный проект студента HTML Academy на курсе «HTML и CSS. Адаптивная вёрстка и автоматизация» #21">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="preload" href="../img/back--mobile@2x.jpg" media="(max-width: 320px) and (min-resolution: 1.1dppx)" as="image">
-    <link rel="preload" href="../img/back--mobile.jpg" media="(max-width: 320px) and (max-resolution: 1dppx)" as="image">
-    <link rel="preload" href="../img/back--tablet@2x.jpg" media="(min-width: 321px) and (max-width: 959px) and (min-resolution: 1.1dppx)" as="image">
-    <link rel="preload" href="../img/back--tablet.jpg" media="(min-width: 321px) and (max-width: 959px) and (max-resolution: 1dppx)" as="image">
-    <link rel="preload" href="../fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../js/script.min.js" as="script">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="img/back--mobile@2x.jpg" media="(max-width: 320px) and (min-resolution: 1.1dppx)" as="image">
+    <link rel="preload" href="img/back--mobile.jpg" media="(max-width: 320px) and (max-resolution: 1dppx)" as="image">
+    <link rel="preload" href="img/back--tablet@2x.jpg" media="(min-width: 321px) and (max-width: 959px) and (min-resolution: 1.1dppx)" as="image">
+    <link rel="preload" href="img/back--tablet.jpg" media="(min-width: 321px) and (max-width: 959px) and (max-resolution: 1dppx)" as="image">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="js/script.min.js" as="script">
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
@@ -29,21 +29,21 @@
         <div class="main-nav main-nav--no-js">
           <a class="main-nav__logo" href="index.html">
             <svg class="main-nav__logo-icon main-nav__logo-icon--mobile" width="74" height="23" role="img" aria-label="Pink." focusable="false">
-              <use xlink:href="../img/pink_sprite.svg#header-logo--small"></use>
+              <use xlink:href="img/pink_sprite.svg#header-logo--small"></use>
             </svg>
             <svg class="main-nav__logo-icon main-nav__logo-icon--tablet" width="145" height="40" role="img" aria-label="Pink." focusable="false">
-              <use xlink:href="../img/pink_sprite.svg#header-logo--medium"></use>
+              <use xlink:href="img/pink_sprite.svg#header-logo--medium"></use>
             </svg>
             <svg class="main-nav__logo-icon main-nav__logo-icon--desktop" width="147" height="40" role="img" aria-label="Pink." focusable="false">
-              <use xlink:href="../img/pink_sprite.svg#header-logo--large"></use>
+              <use xlink:href="img/pink_sprite.svg#header-logo--large"></use>
             </svg>
           </a>
           <button class="main-nav__menu-button button" type="button">
             <svg class="main-nav__menu-button-icon main-nav__menu-button-icon--open" width="50" height="24" aria-hidden="true" focusable="false">
-              <use xlink:href="../img/pink_sprite.svg#menu-btn--open"></use>
+              <use xlink:href="img/pink_sprite.svg#menu-btn--open"></use>
             </svg>
             <svg class="main-nav__menu-button-icon main-nav__menu-button-icon--close" width="23" height="23" aria-hidden="true" focusable="false">
-              <use xlink:href="../img/pink_sprite.svg#menu-btn--close"></use>
+              <use xlink:href="img/pink_sprite.svg#menu-btn--close"></use>
             </svg>
             <span class="visually-hidden">Главное меню</span>
           </button>
@@ -77,14 +77,14 @@
         </div>
         <article class="album__item album__item--featured">
           <h3 class="visually-hidden">Панорама дня от "Pink"</h3>
-          <a class="album__photo-link" href="../img/hi-res/photo-panorama.jpg">
+          <a class="album__photo-link" href="img/hi-res/photo-panorama.jpg">
             <picture>
-              <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-panorama--desktop.webp 1x, ../img/photo-panorama--desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-panorama--tablet.webp 1x, ../img/photo-panorama--tablet@2x.webp 2x">
-              <source type="image/webp" srcset="../img/photo-panorama--mobile.webp 1x, ../img/photo-panorama--mobile@2x.webp 2x">
-              <source media="(min-width: 960px)" srcset="../img/photo-panorama--desktop.jpg 1x, ../img/photo-panorama--desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="../img/photo-panorama--tablet.jpg 1x, ../img/photo-panorama--tablet@2x.jpg 2x">
-              <img class="album__photo" src="../img/photo-panorama--mobile.jpg" srcset="../img/photo-panorama--mobile@2x.jpg 2x" width="280" height="180" alt="фото дня от нашего конкурса.">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-panorama--desktop.webp 1x, img/photo-panorama--desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-panorama--tablet.webp 1x, img/photo-panorama--tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-panorama--mobile.webp 1x, img/photo-panorama--mobile@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/photo-panorama--desktop.jpg 1x, img/photo-panorama--desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-panorama--tablet.jpg 1x, img/photo-panorama--tablet@2x.jpg 2x">
+              <img class="album__photo" src="img/photo-panorama--mobile.jpg" srcset="img/photo-panorama--mobile@2x.jpg 2x" width="280" height="180" alt="фото дня от нашего конкурса.">
             </picture>
           </a>
           <div class="album__caption">
@@ -103,14 +103,14 @@
         </article>
         <ul class="album__list">
           <li class="album__item">
-            <a class="album__photo-link" href="../img/hi-res/photo-1.jpg">
+            <a class="album__photo-link" href="img/hi-res/photo-1.jpg">
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-1--desktop.webp 1x, ../img/photo-1--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-1--tablet.webp 1x, ../img/photo-1--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-1--mobile.webp 1x, ../img/photo-1--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-1--desktop.jpg 1x, ../img/photo-1--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-1--tablet.jpg 1x, ../img/photo-1--tablet@2x.jpg 2x">
-                <img class="album__photo" src="../img/photo-1--mobile.jpg" srcset="../img/photo-1--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-1--desktop.webp 1x, img/photo-1--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-1--tablet.webp 1x, img/photo-1--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-1--mobile.webp 1x, img/photo-1--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-1--desktop.jpg 1x, img/photo-1--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-1--tablet.jpg 1x, img/photo-1--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/photo-1--mobile.jpg" srcset="img/photo-1--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
               </picture>
             </a>
             <div class="album__caption">
@@ -128,14 +128,14 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="../img/hi-res/photo-2.jpg">
+            <a class="album__photo-link" href="img/hi-res/photo-2.jpg">
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-2--desktop.webp 1x, ../img/photo-2--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-2--tablet.webp 1x, ../img/photo-2--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-2--mobile.webp 1x, ../img/photo-2--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-2--desktop.jpg 1x, ../img/photo-2--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-2--tablet.jpg 1x, ../img/photo-2--tablet@2x.jpg 2x">
-                <img class="album__photo" src="../img/photo-2--mobile.jpg" srcset="../img/photo-2--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-2--desktop.webp 1x, img/photo-2--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-2--tablet.webp 1x, img/photo-2--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-2--mobile.webp 1x, img/photo-2--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-2--desktop.jpg 1x, img/photo-2--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-2--tablet.jpg 1x, img/photo-2--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/photo-2--mobile.jpg" srcset="img/photo-2--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
               </picture>
             </a>
             <div class="album__caption">
@@ -153,14 +153,14 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="../img/hi-res/photo-3.jpg">
+            <a class="album__photo-link" href="img/hi-res/photo-3.jpg">
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-3--desktop.webp 1x, ../img/photo-3--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-3--tablet.webp 1x, ../img/photo-3--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-3--mobile.webp 1x, ../img/photo-3--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-3--desktop.jpg 1x, ../img/photo-3--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-3--tablet.jpg 1x, ../img/photo-3--tablet@2x.jpg 2x">
-                <img class="album__photo" src="../img/photo-3--mobile.jpg" srcset="../img/photo-3--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-3--desktop.webp 1x, img/photo-3--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-3--tablet.webp 1x, img/photo-3--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-3--mobile.webp 1x, img/photo-3--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-3--desktop.jpg 1x, img/photo-3--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-3--tablet.jpg 1x, img/photo-3--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/photo-3--mobile.jpg" srcset="img/photo-3--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
               </picture>
             </a>
             <div class="album__caption">
@@ -178,14 +178,14 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="../img/hi-res/photo-4.jpg">
+            <a class="album__photo-link" href="img/hi-res/photo-4.jpg">
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-4--desktop.webp 1x, ../img/photo-4--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-4--tablet.webp 1x, ../img/photo-4--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-4--mobile.webp 1x, ../img/photo-4--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-4--desktop.jpg 1x, ../img/photo-4--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-4--tablet.jpg 1x, ../img/photo-4--tablet@2x.jpg 2x">
-                <img class="album__photo" src="../img/photo-4--mobile.jpg" srcset="../img/photo-4--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-4--desktop.webp 1x, img/photo-4--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-4--tablet.webp 1x, img/photo-4--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-4--mobile.webp 1x, img/photo-4--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-4--desktop.jpg 1x, img/photo-4--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-4--tablet.jpg 1x, img/photo-4--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/photo-4--mobile.jpg" srcset="img/photo-4--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
               </picture>
             </a>
             <div class="album__caption">
@@ -203,14 +203,14 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="../img/hi-res/photo-5.jpg">
+            <a class="album__photo-link" href="img/hi-res/photo-5.jpg">
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-5--desktop.webp 1x, ../img/photo-5--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-5--tablet.webp 1x, ../img/photo-5--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-5--mobile.webp 1x, ../img/photo-5--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-5--desktop.jpg 1x, ../img/photo-5--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-5--tablet.jpg 1x, ../img/photo-5--tablet@2x.jpg 2x">
-                <img class="album__photo" src="../img/photo-5--mobile.jpg" srcset="../img/photo-5--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-5--desktop.webp 1x, img/photo-5--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-5--tablet.webp 1x, img/photo-5--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-5--mobile.webp 1x, img/photo-5--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-5--desktop.jpg 1x, img/photo-5--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-5--tablet.jpg 1x, img/photo-5--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/photo-5--mobile.jpg" srcset="img/photo-5--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
               </picture>
             </a>
             <div class="album__caption">
@@ -228,14 +228,14 @@
             </div>
           </li>
           <li class="album__item">
-            <a class="album__photo-link" href="../img/hi-res/photo-6.jpg">
+            <a class="album__photo-link" href="img/hi-res/photo-6.jpg">
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-6--desktop.webp 1x, ../img/photo-6--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-6--tablet.webp 1x, ../img/photo-6--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-6--mobile.webp 1x, ../img/photo-6--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-6--desktop.jpg 1x, ../img/photo-6--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-6--tablet.jpg 1x, ../img/photo-6--tablet@2x.jpg 2x">
-                <img class="album__photo" src="../img/photo-6--mobile.jpg" srcset="../img/photo-6--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-6--desktop.webp 1x, img/photo-6--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-6--tablet.webp 1x, img/photo-6--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-6--mobile.webp 1x, img/photo-6--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-6--desktop.jpg 1x, img/photo-6--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-6--tablet.jpg 1x, img/photo-6--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/photo-6--mobile.jpg" srcset="img/photo-6--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
               </picture>
             </a>
             <div class="album__caption">
@@ -264,12 +264,12 @@
             <div class="photo-editor__image-box">
               <div class="photo-editor__image-overlay"></div>
               <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="../img/photo-7--desktop.webp 1x, ../img/photo-7--desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="../img/photo-7--tablet.webp 1x, ../img/photo-7--tablet@2x.webp 2x">
-                <source type="image/webp" srcset="../img/photo-7--mobile.webp 1x, ../img/photo-7--mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="../img/photo-7--desktop.jpg 1x, ../img/photo-7--desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="../img/photo-7--tablet.jpg 1x, ../img/photo-7--tablet@2x.jpg 2x">
-                <img class="photo-editor__image" src="../img/photo-7--mobile.jpg" srcset="../img/photo-7--mobile@2x.jpg 2x" width="280" height="374" alt="фото конкурса." loading="lazy">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-7--desktop.webp 1x, img/photo-7--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-7--tablet.webp 1x, img/photo-7--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-7--mobile.webp 1x, img/photo-7--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-7--desktop.jpg 1x, img/photo-7--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-7--tablet.jpg 1x, img/photo-7--tablet@2x.jpg 2x">
+                <img class="photo-editor__image" src="img/photo-7--mobile.jpg" srcset="img/photo-7--mobile@2x.jpg 2x" width="280" height="374" alt="фото конкурса." loading="lazy">
               </picture>
             </div>
           </div>
@@ -278,19 +278,19 @@
             <div class="photo-editor__tools-selectors">
               <button class="photo-editor__tool photo-editor__tool--current photo-editor__tool--crop button" type="button">
                 <svg width="44" height="44" aria-hidden="true" focusable="false">
-                  <use xlink:href="../img/photo-editor_sprite.svg#crop"></use>
+                  <use xlink:href="img/photo-editor_sprite.svg#crop"></use>
                 </svg>
                 <span class="visually-hidden">Кадрировать</span>
               </button>
               <button class="photo-editor__tool photo-editor__tool--fill button" type="button">
                 <svg width="48" height="45" aria-hidden="true" focusable="false">
-                  <use xlink:href="../img/photo-editor_sprite.svg#fill"></use>
+                  <use xlink:href="img/photo-editor_sprite.svg#fill"></use>
                 </svg>
                 <span class="visually-hidden">Раскрасить</span>
               </button>
               <button class="photo-editor__tool photo-editor__tool--contrast button" type="button">
                 <svg width="50" height="32" viewBox="6 0 44 32" aria-hidden="true" focusable="false">
-                  <use xlink:href="../img/photo-editor_sprite.svg#contrast"></use>
+                  <use xlink:href="img/photo-editor_sprite.svg#contrast"></use>
                 </svg>
                 <span class="visually-hidden">Контраст</span>
               </button>
@@ -320,10 +320,10 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
           <svg class="page-footer__logo-icon page-footer__logo-icon--tablet" width="145" height="40" role="img" aria-label="Pink." focusable="false">
-            <use xlink:href="../img/pink_sprite.svg#footer-logo--medium"></use>
+            <use xlink:href="img/pink_sprite.svg#footer-logo--medium"></use>
           </svg>
           <svg class="page-footer__logo-icon page-footer__logo-icon--desktop" width="147" height="40" role="img" aria-label="Pink." focusable="false">
-            <use xlink:href="../img/pink_sprite.svg#footer-logo--large"></use>
+            <use xlink:href="img/pink_sprite.svg#footer-logo--large"></use>
           </svg>
         </a>
         <div class="page-footer__social social">
@@ -331,7 +331,7 @@
             <li class="social__item">
               <a class="social__link social__link--twitter button" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener">
                 <svg class="social__link-icon" width="18" height="14" aria-hidden="true" focusable="false">
-                  <use xlink:href="../img/pink_sprite.svg#logo--twitter"></use>
+                  <use xlink:href="img/pink_sprite.svg#logo--twitter"></use>
                 </svg>
                 <span class="visually-hidden">Наш twitter</span>
               </a>
@@ -339,7 +339,7 @@
             <li class="social__item">
               <a class="social__link social__link--facebook button" href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener">
                 <svg class="social__link-icon" width="9" height="18" aria-hidden="true" focusable="false">
-                  <use xlink:href="../img/pink_sprite.svg#logo--facebook"></use>
+                  <use xlink:href="img/pink_sprite.svg#logo--facebook"></use>
                 </svg>
                 <span class="visually-hidden">Наш facebook</span>
               </a>
@@ -347,7 +347,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noopener">
                 <svg class="social__link-icon" width="19" height="14" aria-hidden="true" focusable="false">
-                  <use xlink:href="../img/pink_sprite.svg#logo--youtube"></use>
+                  <use xlink:href="img/pink_sprite.svg#logo--youtube"></use>
                 </svg>
                 <span class="visually-hidden">Наш youtube</span>
               </a>
@@ -358,7 +358,7 @@
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">
             <span>Разработано</span>
             <svg class="page-footer__copyright-icon" width="27" height="34" aria-hidden="true" focusable="false">
-              <use xlink:href="../img/pink_sprite.svg#logo--html-academy"></use>
+              <use xlink:href="img/pink_sprite.svg#logo--html-academy"></use>
             </svg>
             <span class="visually-hidden">HTML Academy</span>
           </a>
@@ -369,14 +369,14 @@
     <section class="popup popup--photo">
       <div class="popup__message-area">
         <h2 class="visually-hidden">Полноразмерное фото</h2>
-        <img class="popup__full-picture" src="../img/hi-res/photo-panorama.jpg" alt="Файл в высоком разрешении." loading="lazy">
+        <img class="popup__full-picture" src="img/hi-res/photo-panorama.jpg" alt="Файл в высоком разрешении." loading="lazy">
       </div>
       <div class="popup__buttons-area">
-        <a class="popup__download popup__download--file button" href="../img/hi-res/photo-panorama.jpg" download>Скачать файл</a>
+        <a class="popup__download popup__download--file button" href="img/hi-res/photo-panorama.jpg" download>Скачать файл</a>
         <button class="popup__download popup__download--cancel button" type="button" name="popup__cancel">Закрыть окно</button>
       </div>
     </section>
 
-    <script src="../js/script.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

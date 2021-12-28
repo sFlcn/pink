@@ -175,10 +175,12 @@ const photoEditorResetHandler = () => {
   contrastInputHandler();
 }
 
-cropControl.addEventListener('input', cropInputHandler);
-fillControl.addEventListener('input', fillInputHandler);
-contrastControl.addEventListener('input', contrastInputHandler);
-photoEditorReset.addEventListener('click', photoEditorResetHandler);
+if (cropControl && fillControl && contrastControl && photoEditorReset) {
+  cropControl.addEventListener('input', cropInputHandler);
+  fillControl.addEventListener('input', fillInputHandler);
+  contrastControl.addEventListener('input', contrastInputHandler);
+  photoEditorReset.addEventListener('click', photoEditorResetHandler);
+}
 
 // слайдер
 const initSlider = ({

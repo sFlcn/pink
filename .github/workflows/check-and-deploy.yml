@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: '*'
+
+name: Project check and deploy to gh-pages
+jobs:
+  check-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js 📦
+        uses: actions/setup-node@v1
+        with:
+          node-version: '^14.0.0'
+
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Install and build 📂
+        run: |
+          npm ci
+          npm run build
+
+      - name: Run checks 🧪
+        id: checks
+        run: |
+          npm test
+
+      - name: Deploy 🚀
+        if: steps.checks.outcome == 'success'
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages
+          folder: build

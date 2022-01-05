@@ -110,6 +110,7 @@ const createSvgSprite = () => {
 const copyResources = () => {
   return gulp.src([
     'source/fonts/*.{woff2,woff}',
+    'source/data/*',
     'source/icons/*',
     'source/img/**/*.{jpg,png,svg}',
     '!source/img/sprite/**/*'

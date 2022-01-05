@@ -1,6 +1,17 @@
 'use strict';
 
 
+// Функция загрузки внешних данных
+
+const fetchData = async (targetUrl, options) => {
+  const response = await fetch(targetUrl, options);
+  if (response.ok) {
+    return await response.json();
+  }
+  throw new Error(`${response.status} ${response.statusText}`);
+}
+
+
 // Главное меню
 
 const mainNavButton = document.querySelector('.main-nav__menu-button');
@@ -232,16 +243,14 @@ if (photoEditor) {
 
 // слайдер
 
-const initSlider = ({
-    targetElement,
+const startSlider = (
+  target,
+  {
     workScreenWidthMax = Infinity,
     swipeThreshold = 0.3,
     transitionDuration = 0.7
   }) => {
-  const target = document.querySelector(`${targetElement}`);
-  if (!target) {
-    return;
-  };
+  console.log(target);
   const sliderWrapper = target.querySelector('.slider__wrapper');
   const sliderList = target.querySelector('.slider__list');
   const slides = target.querySelectorAll('.slider__item');
@@ -448,11 +457,7 @@ const initSlider = ({
   });
 }
 
-const generateSliderPins = (targetElement, pinsAmount) => {
-  const target = document.querySelector(`${targetElement}`);
-  if (!target) {
-    return;
-  };
+const generateSliderPins = (target, pinsAmount) => {
   const slides = target.querySelectorAll('.slider__item');
   const pinsList = target.querySelector('.slider__markers-list');
 
@@ -471,17 +476,41 @@ const generateSliderPins = (targetElement, pinsAmount) => {
   pinsList.innerHTML = pinsString;
 };
 
-generateSliderPins('.reviews__wrapper.slider');
-initSlider({
-  targetElement: '.reviews__wrapper.slider',
-  swipeThreshold: 0.2,
-  transitionDuration: 0.5,
-});
+// запуск слайдера с отзывами
+const reviewsSlider = document.querySelector('.reviews__wrapper.slider');
+const REVIEWS_SLIDER_DATA_URL = './data/reviewsData.json';
 
-generateSliderPins('.price__slider.slider');
-initSlider({
-  targetElement: '.price__slider.slider',
-  workScreenWidthMax: 659,
-  swipeThreshold: 0.2,
-  transitionDuration: 0.1,
-});
+if (reviewsSlider) {
+  const reviewsList = reviewsSlider.querySelector('.reviews__list');
+  fetchData(REVIEWS_SLIDER_DATA_URL)
+    .then((sliderData) => {
+      reviewsList.innerHTML = sliderData.map(({authorName, authorAbout, reviewText}) => {
+        return `
+          <li class="reviews__item slider__item">
+            <blockquote class="reviews__blockquote">
+              <cite class="reviews__author-name">${authorName}</cite>
+              <p class="reviews__author-about">${authorAbout}</p>
+              <p class="reviews__text">«${reviewText}»</p>
+            </blockquote>
+          </li>
+        `
+      }).join('');
+      generateSliderPins(reviewsSlider);
+      startSlider(reviewsSlider, {
+        swipeThreshold: 0.2,
+        transitionDuration: 0.5,
+      });
+    });
+}
+
+// запуск слайдера с ценами
+const priceSlider = document.querySelector('.price__slider.slider');
+
+if (priceSlider) {
+  generateSliderPins(priceSlider);
+  startSlider(priceSlider, {
+    workScreenWidthMax: 659,
+    swipeThreshold: 0.2,
+    transitionDuration: 0.1,
+  });
+}

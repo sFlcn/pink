@@ -233,12 +233,12 @@ if (photoEditor) {
 // слайдер
 
 const initSlider = ({
-    targetCssClass,
+    targetElement,
     workScreenWidthMax = Infinity,
     swipeThreshold = 0.3,
     transitionDuration = 0.7
   }) => {
-  const target = document.querySelector(`.${targetCssClass}`);
+  const target = document.querySelector(`${targetElement}`);
   if (!target) {
     return;
   };
@@ -448,14 +448,39 @@ const initSlider = ({
   });
 }
 
+const generateSliderPins = (targetElement, pinsAmount) => {
+  const target = document.querySelector(`${targetElement}`);
+  if (!target) {
+    return;
+  };
+  const slides = target.querySelectorAll('.slider__item');
+  const pinsList = target.querySelector('.slider__markers-list');
+
+  if (pinsAmount === undefined) {
+    pinsAmount = slides.length;
+  }
+
+  let pinsString = '';
+  for (let i = 0; i < pinsAmount; i++) {
+    let pinItem =
+    `<li class="slider__markers-item">
+      <button class="slider__marker" type="button" name="Slide-${i+1}"><span class="visually-hidden">Слайд номер ${i+1}</span></button>
+    </li>`;
+    pinsString += pinItem;
+  }
+  pinsList.innerHTML = pinsString;
+};
+
+generateSliderPins('.reviews__wrapper.slider');
 initSlider({
-  targetCssClass: 'reviews__wrapper',
+  targetElement: '.reviews__wrapper.slider',
   swipeThreshold: 0.2,
   transitionDuration: 0.5,
 });
 
+generateSliderPins('.price__slider.slider');
 initSlider({
-  targetCssClass: 'price__slider',
+  targetElement: '.price__slider.slider',
   workScreenWidthMax: 659,
   swipeThreshold: 0.2,
   transitionDuration: 0.1,

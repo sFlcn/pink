@@ -93,10 +93,10 @@ const formStarter = (
 
     if (missingRequired) {
       evt.preventDefault();
-      showPopup(succesPopupElement, succesPopupCloseButton);
+      showPopup(failurePopupElement, failurePopupCloseButton);
     } else {
       evt.preventDefault();
-      showPopup(failurePopupElement, failurePopupCloseButton);
+      showPopup(succesPopupElement, succesPopupCloseButton);
       formElement.reset();
     }
   };

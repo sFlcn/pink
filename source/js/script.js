@@ -119,114 +119,119 @@ if (contestFormElement && contestFormSuccesPopupElement && contestFormFailurePop
 // фотоальбом
 
 const album = document.querySelector('.album');
+const picturePopupElement = document.querySelector('.popup--photo');
+const LIKES_BUTTON_CSS_CLASS = 'likes__button--liked';
 
-if (album) {
-  const picturePopupElement = document.querySelector('.popup--photo');
+if (album && picturePopupElement) {
   const picturePopupImage = picturePopupElement.querySelector('.popup__full-picture');
   const picturePopupDownloadLink = picturePopupElement.querySelector('.popup__download--file');
   const picturePopupCloseButton = picturePopupElement.querySelector('.popup__download--cancel');
-  const albumThumbnails = album.querySelectorAll('.album__photo-link');
-  const albumHearts = album.querySelectorAll('.likes__button');
-  const albumLikesCounter = album.querySelectorAll('.likes__count');
 
-  const thumbnailClickHandler = (thumbnail, photo) => {
-    thumbnail.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      picturePopupImage.src = photo;
-      picturePopupDownloadLink.href = photo;
-      picturePopupElement.classList.add('popup--show');
-    });
+  const likesClickHandler = (button, counter, cssClass) => {
+    if (button.classList.contains(cssClass)) {
+      counter.textContent--;
+    } else {
+      counter.textContent++;
+    }
+    button.classList.toggle(cssClass);
+    document.activeElement.blur();
   };
 
-  for (var i = 0; i < albumThumbnails.length; i++) {
-    var photoUrl = albumThumbnails[i].href;
-    thumbnailClickHandler(albumThumbnails[i], photoUrl);
-    picturePopupCloseButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      picturePopupElement.classList.remove('popup--show');
-    });
-  }
-
-  var addLikesClickHandler = function (likeButton, counter) {
-    likeButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      if (likeButton.classList.contains('likes__button--liked')) {
-        counter.textContent--;
-      } else {
-        counter.textContent++;
-      }
-      likeButton.classList.toggle('likes__button--liked');
-      document.activeElement.blur();
-    });
+  const thumbnailClickHandler = (photo) => {
+    const photoUrl = photo.href;
+    picturePopupImage.src = photoUrl;
+    picturePopupDownloadLink.href = photoUrl;
+    showPopup(picturePopupElement, picturePopupCloseButton);
   };
 
-  for (var i = 0; i < albumHearts.length; i++) {
-    addLikesClickHandler(albumHearts[i], albumLikesCounter[i]);
-  }
+  album.addEventListener('click', (evt) => {
+    const albumItem = evt.target.closest('.album__item');
+    const albumItemPhotoLink = evt.target.closest('.album__photo-link');
+    const albumItemLikesButton = evt.target.closest('.likes__button');
+    const albumLikesCounter = albumItem.querySelector('.likes__count');
+
+    if (albumItemPhotoLink) {
+      evt.preventDefault();
+      thumbnailClickHandler(albumItemPhotoLink);
+      return;
+    }
+
+    if (albumItemLikesButton && albumLikesCounter) {
+      evt.preventDefault();
+      likesClickHandler(albumItemLikesButton, albumLikesCounter, LIKES_BUTTON_CSS_CLASS);
+      return;
+    }
+  });
 }
 
 
 // фоторедактор
-var photoEditor = document.querySelector('.photo-editor');
+
+const photoEditor = document.querySelector('.photo-editor__interface');
 
 if (photoEditor) {
-  var photoEditorTools = photoEditor.querySelectorAll('.photo-editor__tool');
-  var photoEditorRanges = photoEditor.querySelectorAll('.photo-editor__range');
+  const photoEditorImage = photoEditor.querySelector('.photo-editor__image');
+  const photoEditorOverlay = photoEditor.querySelector('.photo-editor__image-overlay');
+  const photoEditorControls = photoEditor.querySelector('.photo-editor__controls');
+  const photoEditorTools = photoEditor.querySelectorAll('.photo-editor__tool');
+  const photoEditorRanges = photoEditor.querySelectorAll('.photo-editor__range');
+  const cropControl = photoEditor.querySelector('.photo-editor__range--crop input');
+  const fillControl = photoEditor.querySelector('.photo-editor__range--fill input');
+  const contrastControl = photoEditor.querySelector('.photo-editor__range--contrast input');
+  const photoEditorReset = photoEditor.querySelector('.photo-editor__button--reset');
 
-  var addPhotoEditorToolsClickHandler = function (button, range) {
-    button.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      for (var i = 0; i < photoEditorTools.length; i++) {
-        photoEditorTools[i].classList.remove('photo-editor__tool--current');
-        photoEditorRanges[i].classList.remove('photo-editor__range--current');
+  photoEditorControls.addEventListener('click', (evt) => {
+    const currentToolButton = evt.target.closest('.photo-editor__tool');
+    if (!currentToolButton) {
+      return;
+    }
+    evt.preventDefault();
+
+    for (const editorTool of photoEditorTools) {
+      editorTool.classList.remove('photo-editor__tool--current');
+    }
+    currentToolButton.classList.add('photo-editor__tool--current');
+
+    for (const editorRange of photoEditorRanges) {
+      if (editorRange.dataset.tool === currentToolButton.dataset.tool) {
+        editorRange.classList.add('photo-editor__range--current');
+      } else {
+        editorRange.classList.remove('photo-editor__range--current');
       }
-      button.classList.add('photo-editor__tool--current');
-      range.classList.add('photo-editor__range--current');
-      document.activeElement.blur();
-    });
-  };
+    }
+    document.activeElement.blur();
+  });
 
-  for (var i = 0; i < photoEditorTools.length; i++) {
-    addPhotoEditorToolsClickHandler(photoEditorTools[i], photoEditorRanges[i]);
+  const cropInputHandler = () => {
+    photoEditorImage.style.transform = `scale(${1 + 0.04 * cropControl.value})`;
   }
-}
 
-const photoEditorImage = document.querySelector('.photo-editor__image');
-const photoEditorOverlay = document.querySelector('.photo-editor__image-overlay');
-const cropControl = document.querySelector('.photo-editor__range--crop input');
-const fillControl = document.querySelector('.photo-editor__range--fill input');
-const contrastControl = document.querySelector('.photo-editor__range--contrast input');
-const photoEditorReset = document.querySelector('.photo-editor__button--reset');
+  const fillInputHandler = () => {
+    photoEditorOverlay.style.opacity = (0.01 * fillControl.value);
+  }
 
-const cropInputHandler = () => {
-  photoEditorImage.style.transform = `scale(${1 + 0.04 * cropControl.value})`;
-}
+  const contrastInputHandler = () => {
+    photoEditorImage.style.filter = `contrast(${(0.015 * contrastControl.value) + 0.25})`;
+  }
 
-const fillInputHandler = () => {
-  photoEditorOverlay.style.opacity = (0.01 * fillControl.value);
-}
+  const photoEditorResetHandler = () => {
+    cropControl.value = 0;
+    cropInputHandler();
+    fillControl.value = 0;
+    fillInputHandler();
+    contrastControl.value = 50;
+    contrastInputHandler();
+  }
 
-const contrastInputHandler = () => {
-  photoEditorImage.style.filter = `contrast(${(0.015 * contrastControl.value) + 0.25})`;
-}
-
-const photoEditorResetHandler = () => {
-  cropControl.value = 0;
-  cropInputHandler();
-  fillControl.value = 0;
-  fillInputHandler();
-  contrastControl.value = 50;
-  contrastInputHandler();
-}
-
-if (cropControl && fillControl && contrastControl && photoEditorReset) {
   cropControl.addEventListener('input', cropInputHandler);
   fillControl.addEventListener('input', fillInputHandler);
   contrastControl.addEventListener('input', contrastInputHandler);
   photoEditorReset.addEventListener('click', photoEditorResetHandler);
 }
 
+
 // слайдер
+
 const initSlider = ({
     targetCssClass,
     workScreenWidthMax = Infinity,

@@ -134,6 +134,8 @@ const picturePopupElement = document.querySelector('.popup--photo');
 const LIKES_BUTTON_CSS_CLASS = 'likes__button--liked';
 
 if (album && picturePopupElement) {
+  const albumList = album.querySelector('.album__list');
+  const PHOTO_ALBUM_DATA_URL = './data/albumData.json';
   const picturePopupImage = picturePopupElement.querySelector('.popup__full-picture');
   const picturePopupDownloadLink = picturePopupElement.querySelector('.popup__download--file');
   const picturePopupCloseButton = picturePopupElement.querySelector('.popup__download--cancel');
@@ -173,6 +175,40 @@ if (album && picturePopupElement) {
       return;
     }
   });
+
+  // загрузка фотоальбома
+  fetchData(PHOTO_ALBUM_DATA_URL)
+    .then((albumData) => {
+      albumList.innerHTML = albumData.map(({authorName, datetime, time, comment, likes, fileName}) => {
+        return `
+          <li class="album__item">
+            <a class="album__photo-link" href="img/hi-res/photo-1.jpg">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/${fileName}--desktop.webp 1x, img/${fileName}--desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/${fileName}--tablet.webp 1x, img/${fileName}--tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/${fileName}--mobile.webp 1x, img/${fileName}--mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/${fileName}--desktop.jpg 1x, img/${fileName}--desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/${fileName}--tablet.jpg 1x, img/${fileName}--tablet@2x.jpg 2x">
+                <img class="album__photo" src="img/${fileName}--mobile.jpg" srcset="img/${fileName}--mobile@2x.jpg 2x" width="280" height="180" alt="фото конкурса." loading="lazy">
+              </picture>
+            </a>
+            <div class="album__caption">
+              <blockquote class="album__description">
+                <p class="album__source">
+                  <cite class="album__author">${authorName}</cite>
+                  <time class="album__time" datetime="${datetime}">(${time})</time>
+                </p>
+                <p class="album__comment">${comment}</p>
+              </blockquote>
+              <div class="album__likes likes">
+                <button class="likes__button button" type="button"><span class="visually-hidden">Поставить лайк</span></button>
+                <p class="likes__text">Нравится: <span class="likes__count">${likes}</span></p>
+              </div>
+            </div>
+          </li>
+        `
+      }).join('');
+    });
 }
 
 
@@ -250,7 +286,6 @@ const startSlider = (
     swipeThreshold = 0.3,
     transitionDuration = 0.7
   }) => {
-  console.log(target);
   const sliderWrapper = target.querySelector('.slider__wrapper');
   const sliderList = target.querySelector('.slider__list');
   const slides = target.querySelectorAll('.slider__item');

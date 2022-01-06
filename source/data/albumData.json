@@ -1,0 +1,50 @@
+[
+  {
+    "authorName": "Левон",
+    "datetime": "2020-12-01T18:38",
+    "time": "5&nbsp;часов&nbsp;назад",
+    "comment": "Вчера он на луну летал, сегодня в руки к нам попал.",
+    "likes": 356,
+    "fileName": "photo-1"
+  },
+  {
+    "authorName": "Антон",
+    "datetime": "2020-12-01T11:41",
+    "time": "12&nbsp;часов&nbsp;назад",
+    "comment": "Соседи будут рады!",
+    "likes": 666,
+    "fileName": "photo-2"
+  },
+  {
+    "authorName": "Борис",
+    "datetime": "2020-12-01T03:31",
+    "time": "20&nbsp;часов&nbsp;назад",
+    "comment": "Здесь могла быть ваша цитата о высоком и вечном.",
+    "likes": 215,
+    "fileName": "photo-3"
+  },
+  {
+    "authorName": "Сергей",
+    "datetime": "2020-11-30T21:50",
+    "time": "25&nbsp;часов&nbsp;назад",
+    "comment": "Самая кубанская в мире!",
+    "likes": 4,
+    "fileName": "photo-4"
+  },
+  {
+    "authorName": "Максим",
+    "datetime": "2020-11-30T07:44",
+    "time": "40&nbsp;часов&nbsp;назад",
+    "comment": "Где снег-то?",
+    "likes": 150,
+    "fileName": "photo-5"
+  },
+  {
+    "authorName": "Надежда",
+    "datetime": "2020-11-30T02:34",
+    "time": "45&nbsp;часов&nbsp;назад",
+    "comment": "Всем GM и взаимные лайки!",
+    "likes": 2560,
+    "fileName": "photo-6"
+  }
+]

@@ -1,60 +1,55 @@
-# Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Проект «Пинк»
 
-* Студент: [Павел](https://up.htmlacademy.ru/adaptive/21/user/997009).
-* Наставник: [Игорь Бабушкин](https://htmlacademy.ru/profile/id185816).
+[![build status](https://github.com/sFlcn/pink/actions/workflows/check-and-deploy.yml/badge.svg)](https://github.com/sFlcn/pink/actions/workflows/check-and-deploy.yml)
 
----
+Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru).
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+Изначально разрабатывался с помощью *Gulp 4.0* в *Node.js 12*. После окончания курса скрипты сборки были донастроены, часть инструментов (сжатие изображений, минификация файлов, etc.) была обновлена на более актуальные ко времени *Node.js 16*; также был настроен *github-action* для автоматической развёртки на [github-pages](https://sflcn.github.io/pink/) и добавлен js-функционал (дополнительная интерактивность, загрузка данных).
 
-Полезный файл:
-
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
-
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+![html](https://img.shields.io/badge/html-informational?style=flat&logo=HTML5&logoColor=e34f26&color=d3d3d3)
+![sass](https://img.shields.io/badge/sass-informational?style=flat&logo=sass&logoColor=cc6699&color=d3d3d3)
+![JavaScript](https://img.shields.io/badge/JavaScript-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=d3d3d3)
+![Node.js](https://img.shields.io/badge/Node.js-informational?style=flat&logo=Node.js&logoColor=339933&color=d3d3d3)
+![Gulp](https://img.shields.io/badge/Gulp-informational?style=flat&logo=gulp&logoColor=cf4647&color=d3d3d3)
 
 ---
 
-### Памятка
+## Разработка
 
-#### 1. Зарегистрируйтесь на Гитхабе
+- Установка зависимостей: `npm install`
+- Сборка: `npm run build`
+- Запуск локального сервера: `npm start`
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+## Техническое задание
 
-#### 2. Создайте форк
+### Общие требования
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/997009-pink-21) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+1. Сетка: *определена в макете*.
+2. Адаптивность сетки: **мобильная, планшетная и десктопная версии**.
+3. Адаптивность графики: **ретинизация, векторные изображения**.
+4. Используемая методология: **БЭМ**.
+5. Используемый препроцессор: **Sass**.
+6. Используемый инструмент автоматизации: **Gulp**.
+7. Используемые библиотеки: *нет*.
+8. Кроссбраузерность: **Chrome, Firefox, Safari**.
+9. Типографика: *частично определена в макете (прочее — на усмотрение разработчика)*.
+10. Используемый шрифт: *Open Sans*.
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808088-259e3a80-a190-11e9-98f7-3c0edd9740f5.jpg">
+- Разметка семантическая.
+- Вёрстка адаптивная, *mobile-first* — брейкпоинты: *320px, 660px, 960px*.
+- Оптимизация:
+  - WebP
+  - векторный спрайт
+  - предзагрузка шрифтов и изображений
 
-Получится вот так:
+### Дизайн
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808087-2505a400-a190-11e9-8caa-2e7584c702cc.jpg">
+- [Макет в Figma.](https://www.figma.com/file/eDlmMX4rcjdkiS0PV5XO8v/HTML-2-%2F-%D0%9F%D0%B8%D0%BD%D0%BA-(Copy)?node-id=1%3A323)
 
-#### 3. Клонируйте репозиторий на свой компьютер
+- [Видео-обзор проекта на youtube](https://www.youtube.com/watch?v=5gGJ5Qcc-MU):
 
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808090-259e3a80-a190-11e9-8a64-c58d94803b73.jpg">
-
-Клонировать репозиторий можно так:
-
-```
-git clone SSH-адрес_вашего_форка
-```
-
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
+  [![ссылка на youtube](https://img.youtube.com/vi/5gGJ5Qcc-MU/1.jpg)](https://www.youtube.com/watch?v=5gGJ5Qcc-MU)
 
 ---
 
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
-
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/997009-pink-21.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/997009-pink-21
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/997009-pink-21/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/997009-pink-21?type=dev
+Репозиторий создан в рамках обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).

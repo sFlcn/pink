@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: '*'
 
-name: Project check and deploy to gh-pages
+name: Check and deploy
 jobs:
   check-and-deploy:
     runs-on: ubuntu-latest

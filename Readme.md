@@ -2,12 +2,14 @@
 
 [![build status](https://github.com/sFlcn/pink/actions/workflows/check-and-deploy.yml/badge.svg)](https://github.com/sFlcn/pink/actions/workflows/check-and-deploy.yml)
 
-Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru).
+Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru) по вёрстке.
 
 Изначально разрабатывался с помощью *Gulp 4.0* в *Node.js 12*. После окончания курса скрипты сборки были донастроены, часть инструментов (сжатие изображений, минификация файлов, etc.) была обновлена на более актуальные ко времени *Node.js 16*; также был настроен *github-action* для автоматической развёртки на [github-pages](https://sflcn.github.io/pink/) и добавлен js-функционал (дополнительная интерактивность, загрузка данных).
 
 ![html](https://img.shields.io/badge/html-informational?style=flat&logo=HTML5&logoColor=e34f26&color=d3d3d3)
+![BEM](https://img.shields.io/badge/BEM-informational?style=flat&logo=BEM&logoColor=000000&color=d3d3d3)
 ![sass](https://img.shields.io/badge/sass-informational?style=flat&logo=sass&logoColor=cc6699&color=d3d3d3)
+![SVG](https://img.shields.io/badge/SVG-informational?style=flat&logo=SVG&logoColor=ffb13b&color=d3d3d3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=d3d3d3)
 ![Node.js](https://img.shields.io/badge/Node.js-informational?style=flat&logo=Node.js&logoColor=339933&color=d3d3d3)
 ![Gulp](https://img.shields.io/badge/Gulp-informational?style=flat&logo=gulp&logoColor=cf4647&color=d3d3d3)
@@ -43,8 +45,6 @@
   - предзагрузка шрифтов и изображений
 
 ### Дизайн
-
-- [Макет в Figma.](https://www.figma.com/file/eDlmMX4rcjdkiS0PV5XO8v/HTML-2-%2F-%D0%9F%D0%B8%D0%BD%D0%BA-(Copy)?node-id=1%3A323)
 
 - [Видео-обзор проекта на youtube](https://www.youtube.com/watch?v=5gGJ5Qcc-MU):
 

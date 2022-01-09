@@ -385,8 +385,6 @@ img {
   }
 }
 .main-nav--opened {
-  margin-bottom: 12px;
-  padding-bottom: 5px;
   background-color: #283645;
 }
 @media (min-width: 660px) {
@@ -559,7 +557,7 @@ img {
 .main-nav--opened .main-nav__list {
   animation: menu-appearence 0.4s;
   position: absolute;
-  top: 70px;
+  top: 67px;
   z-index: 10;
 }
 @media (min-width: 660px) {

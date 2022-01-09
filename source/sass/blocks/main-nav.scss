@@ -22,8 +22,6 @@
   }
 
   &--opened {
-    margin-bottom: 12px;
-    padding-bottom: 5px;
     background-color: $palette-prime;
 
     @media (min-width: $tablet-width) {
@@ -69,7 +67,7 @@
   transition: color 0.15s ease, fill 0.42s ease, opacity 0.22s ease;
 
   &--mobile {
-    @media (max-width: $tablet-width - 1) {
+    @media (max-width: ($tablet-width - 1)) {
       display: block;
     }
   }
@@ -180,7 +178,7 @@
 }
 
 .main-nav--closed .main-nav__list {
-  @media (max-width: $desktop-width - 1) {
+  @media (max-width: ($desktop-width - 1)) {
     display: none;
     box-shadow: none;
   }
@@ -189,7 +187,7 @@
 .main-nav--opened .main-nav__list {
   animation: menu-appearence 0.4s;
   position: absolute;
-  top: 70px;
+  top: 67px;
   z-index: 10;
 
   @media (min-width: $tablet-width) {

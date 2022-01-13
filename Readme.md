@@ -1,6 +1,10 @@
 # Проект «Пинк»
 
 [![build status](https://github.com/sFlcn/pink/actions/workflows/check-and-deploy.yml/badge.svg)](https://github.com/sFlcn/pink/actions/workflows/check-and-deploy.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/sFlcn/pink?logo=git)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sFlcn/pink)
+![GitHub repo size](https://img.shields.io/github/repo-size/sFlcn/pink)
 
 Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru) по вёрстке.
 
@@ -10,7 +14,6 @@
 ![sass](https://img.shields.io/badge/sass-informational?style=flat&logo=sass&logoColor=cc6699&color=d3d3d3)
 ![SVG](https://img.shields.io/badge/SVG-informational?style=flat&logo=SVG&logoColor=ffb13b&color=d3d3d3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=d3d3d3)
-![Node.js](https://img.shields.io/badge/Node.js-informational?style=flat&logo=Node.js&logoColor=339933&color=d3d3d3)
 ![Gulp](https://img.shields.io/badge/Gulp-informational?style=flat&logo=gulp&logoColor=cf4647&color=d3d3d3)
 
 ---
